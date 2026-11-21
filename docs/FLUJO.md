@@ -12,7 +12,7 @@ Desde esta versión, una plantilla nueva se genera en este orden:
 2. La paleta reescribe el atlas: grises a turquesa, tonos cálidos a magenta, amarillos a verde lima, y el negro se conserva.
 3. El desdoble va a una lámina de cartón de 1.22 × 2.44 m, a escala 1:1, con margen de 10 mm.
 4. `--ceja-triangular` convierte cada solapa de pegado de trapecio a triángulo. Se quita el lado corto exterior. La base sigue siendo el doblez y se pega con el mismo número. La tijera hace dos cortes en la solapa. La malla no se toca.
-5. `scripts/mosaico_doble.py` mide cada isla contra la doble carta. Si cabe, se imprime entera y comparte hoja cuando el recuadro lo permite. Si no cabe, se parte en mosaico, con 15 mm de solape y claves de esquina. Se imprime al 100 %. La hoja 1 es el cuadrado de 100 mm.
+5. `scripts/mosaico_doble.py` mide cada isla contra la doble carta. Si cabe, se imprime entera y comparte hoja cuando el recuadro lo permite. Si no cabe, se parte en mosaico, con 15 mm de solape y claves de esquina. Se imprime al 100 %. La hoja 1 es el cuadrado de 100 mm y, encima, la figura ya armada. Cada hoja lleva una palabra del proyecto, distinta de la de los demás.
 
 El dodo publicado en `v0.1.0` se armó antes de la solapa triangular: su mosaico todavía trae solapas trapecio. El jabalí de 50 cm es la primera plantilla con esas solapas. Esos dos PDF se partieron con una hoja por isla. El acomodo de varias islas en la misma hoja entra después, y el primer archivo hecho así es el jabalí de 40 cm.
 
@@ -75,7 +75,15 @@ El uso es este. El desdoble no cambia: la lámina de cartón sigue a escala 1:1 
 - Si el recuadro cabe, derecho o girado 90°, la isla se imprime completa. Varias comparten la hoja cuando quedan 2 mm entre recuadros. Se corta cada contorno. Esa separación no se pega y la hoja no lleva clave de esquina.
 - Si el recuadro no cabe, la isla se parte en mosaico. El giro es el que usa menos hojas. El solape de 15 mm se pega y la clave junta las esquinas. El giro mueve la isla sobre el papel; el milímetro del dibujo no cambia.
 
-En ese jabalí el resultado es `salida/jabali/40cm_carton_30grados_paleta_ceja/mosaico_doble_carta.pdf`: 26 hojas doble carta, con la paleta ya horneada. La hoja 1 es la prueba de 100 mm. Siete hojas llevan las 20 islas enteras. Dieciocho parten las cinco islas grandes: el cuerpo 9 en 8, el cuerpo 7 en 4, la montura en 2 y cada muslo de las patas 1 y 3 en 2. Esos dos muslos pasaban de 4 hojas a 2 al poner el lado largo de la isla sobre el lado largo del papel. El índice hoja por hoja está en `MOSAICO.txt`, en la misma carpeta.
+En ese jabalí el resultado es `salida/jabali/40cm_carton_30grados_paleta_ceja/mosaico_doble_carta.pdf`: 26 hojas doble carta, con la paleta ya horneada. La palabra de cada hoja es `JABALI40`. La hoja 1 trae la prueba de 100 mm y, arriba, la figura armada. Siete hojas llevan las 20 islas enteras. Dieciocho parten las cinco islas grandes: el cuerpo 9 en 8, el cuerpo 7 en 4, la montura en 2 y cada muslo de las patas 1 y 3 en 2. Esos dos muslos pasaban de 4 hojas a 2 al poner el lado largo de la isla sobre el lado largo del papel. El índice hoja por hoja está en `MOSAICO.txt`, en la misma carpeta.
+
+## La palabra y la figura de referencia
+
+En la maquila se reaprovecha el lado blanco de una hoja, y a veces esa hoja ya trae islas de otro proyecto por el reverso. Si el artesano las revuelve o las voltea, el dibujo del otro proyecto se confunde con el de esta entrega.
+
+Cada proyecto lleva una sola palabra, distinta de la de los demás. El generador la escribe en `MARCA.txt`. Por defecto junta el animal y los centímetros: `JABALI40`, `JABALI50`, `DODO100`. `--marca` pone otra. El mosaico la imprime en negrita, abajo a la derecha de cada hoja, incluida la del cuadrado.
+
+La misma corrida guarda `referencia.png`, una vista de tres cuartos del modelo ya armado. El mosaico la coloca en la hoja del cuadrado, por encima de la prueba de 100 mm, con el texto «figura armada, no se corta». No es una isla.
 
 ## Textura
 

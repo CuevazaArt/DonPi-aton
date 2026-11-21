@@ -36,6 +36,8 @@ py -3 scripts/mosaico_doble.py --origen salida/dodo/carton_30grados_paleta_ceja 
 
 El mosaico del dodo que ya está en `salida/dodo/carton_30grados_paleta/` se generó sin `--ceja-triangular`. Sus solapas siguen en trapecio.
 
+El generador escribe `MARCA.txt` y `referencia.png` en la carpeta de la plantilla. La palabra junta el animal y los centímetros, salvo que se pase `--marca`. El mosaico imprime esa palabra en cada hoja y pone la figura armada en la hoja del cuadrado. `--marca` y `--referencia` cambian esos dos datos sin volver a desdoblar.
+
 El script del mosaico también reescribe `MOSAICO.txt` junto al PDF. La hoja 1 es `00_prueba_100mm.pdf`.
 
 Si falta pypdf:

@@ -1,5 +1,7 @@
 Doble carta, 279 x 432 mm, a escala real.
 Imprimir al 100 %, sin ajustar a la pagina.
+Cada hoja lleva la palabra JABALI40. Identifica este proyecto si las hojas se mezclan o se voltean.
+La figura armada de la hoja 1 es referencia. No se corta.
 La hoja marcada como islas enteras trae una o varias islas completas.
 Cada una se corta por su contorno. Entre ellas hay 2 mm. Esa separacion no se pega.
 La hoja marcada como mosaico es un trozo de una isla que no cupo.

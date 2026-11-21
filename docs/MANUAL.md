@@ -10,6 +10,10 @@ Archivo: `salida/dodo/carton_30grados_paleta/mosaico_doble_carta.pdf`.
 
 La hoja 1 trae el cuadrado `00_prueba_100mm`. Mide el interior del cuadrado, no la solapa. Tiene que dar 100 mm. Si da otra medida, la impresora está escalando: corrige eso antes de gastar el resto del papel.
 
+En las entregas nuevas, esa misma hoja trae arriba la figura ya armada. Es una referencia del proyecto. No se recorta.
+
+Cada hoja trae abajo a la derecha una palabra del proyecto, por ejemplo `JABALI40` o `DODO100`. Si una hoja reciclada muestra islas por el otro lado, o si las hojas se voltean en la maquila, esa palabra dice a qué entrega pertenece la cara impresa.
+
 ## 2. Ordena las hojas
 
 Cada hoja dice abajo la pieza, la isla, la fila y la columna. La fila 1 es la de arriba. La columna 1 es la de la izquierda. Un ejemplo: `01_cuerpo isla 1  4/5 x 1/5` es la fila 4 de 5 y la columna 1 de 5 del cuerpo.
@@ -58,7 +62,7 @@ La cola queda hacia +Y y el hocico hacia −Y. Las patas 1 y 3 están del lado d
 
 Archivo: `salida/jabali/40cm_carton_30grados_paleta_ceja/mosaico_doble_carta.pdf`.
 
-26 hojas doble carta, con la paleta impresa. El jabalí queda a 40 cm de alto. Imprime al 100 %. La hoja 1 es el cuadrado de 100 mm: mide el interior, no la solapa.
+26 hojas doble carta, con la paleta impresa. El jabalí queda a 40 cm de alto. Imprime al 100 %. Cada hoja dice `JABALI40` abajo a la derecha. La hoja 1 es el cuadrado de 100 mm: mide el interior, no la solapa. Arriba está la figura armada; esa imagen no se recorta.
 
 Hay dos clases de hoja, y el texto de abajo lo dice.
 

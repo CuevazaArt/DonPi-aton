@@ -8,15 +8,14 @@ blam y Sketchfab no patrocinan este proyecto.
 Jabali a 0.40 m de alto, plantilla a escala real. Disolucion: 30 grados.
 Las solapas de pegado pasan de trapecio a triangulo: se quita el lado corto exterior y la base sigue siendo el doblez. La malla conserva la disolucion.
 Caras antes de disolver: 668. Despues: 424.
+Cada hoja de impresion lleva la palabra JABALI40. Distingue este proyecto si las hojas se mezclan o se voltean.
+La hoja del cuadrado de 100 mm trae la figura armada. Esa imagen es referencia y no se corta.
 Cada PDF suelto es una lamina de carton de 1.22 x 2.44 m, a escala real.
-Para la impresora domestica usa mosaico_doble_carta.pdf: 26 hojas doble carta, con la paleta.
-La hoja 1 es el cuadrado de 100 mm.
-Siete hojas traen las 20 islas que caben enteras. Si hay varias en la misma hoja, se corta cada contorno y el papel de en medio se descarta. Van separadas 2 mm. Esas hojas no llevan clave.
-Dieciocho hojas parten las cinco islas que no caben: cuerpo 9 en 8, cuerpo 7 en 4, montura en 2, y los muslos de las patas 1 y 3 en 2 cada uno.
-En esas hojas el solape es de 15 mm. El borde se pega. No se corta.
-La esquina que toca otra hoja lleva una clave de cuatro signos. La misma clave va en la hoja vecina.
+Para la impresora domestica usa mosaico_doble_carta.pdf: 26 hojas doble carta, al 100 %.
+La palabra JABALI40 va abajo a la derecha de cada hoja.
+La hoja 1 trae el cuadrado de 100 mm y, arriba, la figura armada. Esa imagen no se corta.
+Siete hojas traen las 20 islas que caben enteras. Dieciocho parten las cinco que no caben.
 La lista hoja por hoja esta en MOSAICO.txt.
-Son 25 islas para cortar: el cuerpo queda en 11 y cada otra pieza en una.
 El corte es el contorno de cada isla. El borde de la lamina no se recorta si no hay linea.
 Dentro de la isla, la linea continua se corta y la punteada se dobla.
 00_prueba_100mm.pdf sigue siendo carta: el cuadrado interior tiene que medir 100 mm.

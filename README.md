@@ -22,7 +22,7 @@ Imprime este archivo al 100 %, en doble carta:
 
 Son 57 hojas y 25 piezas de corte. El jabalí queda a 50 cm de alto. Ese archivo se partió con una isla por hoja. Las solapas son triángulos: dos cortes, y la base es el doblez. El modelo es «boar block anim» por [blam](https://sketchfab.com/Blam577895), [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/). El detalle está en [créditos](docs/CREDITOS.md).
 
-El de 40 cm, con la misma paleta y ya acomodado, está en `salida/jabali/40cm_carton_30grados_paleta_ceja/mosaico_doble_carta.pdf`. Son 26 hojas. Las islas que caben comparten hoja y las cinco que no caben siguen en mosaico.
+El de 40 cm, con la misma paleta y ya acomodado, está en `salida/jabali/40cm_carton_30grados_paleta_ceja/mosaico_doble_carta.pdf`. Son 26 hojas. Cada una dice `JABALI40`. La primera trae el cuadrado de 100 mm y la figura armada. Las islas que caben comparten hoja y las cinco que no caben siguen en mosaico.
 
 ## Ejemplo
 

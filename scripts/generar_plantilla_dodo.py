@@ -404,6 +404,69 @@ def desdoblar(obj, destino, textura=None, hoja=None):
     return set(resultado)
 
 
+def marca_del_proyecto(animal, alto_m):
+    pedido = argumento("--marca", "")
+    if pedido:
+        return "".join(caracter for caracter in pedido.upper() if caracter.isascii() and caracter.isalnum())[:16]
+    base = "JABALI" if animal == "jabali" else "DODO" if animal == "dodo" else animal.upper()
+    return f"{base}{int(round(alto_m * 100))}"
+
+
+def guardar_referencia(piezas, destino):
+    """Vista de tres cuartos del modelo ya armado, para la hoja del cuadrado."""
+    escena = bpy.context.scene
+    piezas = [obj for obj in piezas if not obj.name.startswith("00_")] or list(piezas)
+    for obj in bpy.data.objects:
+        if obj.type == "MESH":
+            obj.hide_render = obj not in piezas
+    coordenadas = [vertice.co.copy() for obj in piezas for vertice in obj.data.vertices]
+    minimo = Vector(
+        (
+            min(punto.x for punto in coordenadas),
+            min(punto.y for punto in coordenadas),
+            min(punto.z for punto in coordenadas),
+        )
+    )
+    maximo = Vector(
+        (
+            max(punto.x for punto in coordenadas),
+            max(punto.y for punto in coordenadas),
+            max(punto.z for punto in coordenadas),
+        )
+    )
+    centro = (minimo + maximo) / 2
+    medida = maximo - minimo
+    datos = bpy.data.cameras.new("referencia")
+    datos.type = "ORTHO"
+    datos.ortho_scale = max(medida.x, medida.y, medida.z) * 1.35
+    camara = bpy.data.objects.new("referencia", datos)
+    escena.collection.objects.link(camara)
+    camara.location = centro + Vector((-medida.x * 0.8, -medida.y * 1.1, medida.z * 0.9))
+    camara.rotation_euler = (centro - camara.location).to_track_quat("-Z", "Z").to_euler()
+    escena.camera = camara
+    if escena.world is None:
+        escena.world = bpy.data.worlds.new("referencia")
+    escena.world.color = (1, 1, 1)
+    escena.render.engine = "BLENDER_WORKBENCH"
+    escena.display.shading.light = "STUDIO"
+    try:
+        escena.display.shading.color_type = "TEXTURE" if con_textura() else "MATERIAL"
+    except TypeError:
+        escena.display.shading.color_type = "MATERIAL"
+    try:
+        escena.display.shading.background_type = "WORLD"
+    except TypeError:
+        pass
+    escena.render.resolution_x = 900
+    escena.render.resolution_y = 700
+    escena.render.image_settings.file_format = "PNG"
+    escena.render.film_transparent = True
+    escena.render.filepath = str(destino)
+    bpy.ops.render.render(write_still=True)
+    bpy.data.objects.remove(camara, do_unlink=True)
+    print("REFERENCIA", destino)
+
+
 def unir(objetos):
     activo = objetos[0]
     activar(activo)
@@ -531,6 +594,10 @@ def main():
             )
         print("PIEZA", lineas[-1])
 
+    marca = marca_del_proyecto(animal, alto_pedido)
+    (OUT / "MARCA.txt").write_text(marca + "\n", encoding="utf-8")
+    guardar_referencia(piezas, OUT / "referencia.png")
+
     plano = bpy.data.objects.new("00_prueba_100mm", bpy.data.meshes.new("regla"))
     escena.collection.objects.link(plano)
     malla = bmesh.new()
@@ -591,6 +658,8 @@ def main():
                     else []
                 ),
                 f"Caras antes de disolver: {caras_antes}. Despues: {caras_despues}.",
+                f"Cada hoja de impresion lleva la palabra {marca}. Distingue este proyecto si las hojas se mezclan o se voltean.",
+                "La hoja del cuadrado de 100 mm trae la figura armada. Esa imagen es referencia y no se corta.",
                 (
                     "Cada PDF es una lamina de carton de 1.22 x 2.44 m, a escala real."
                     if hoja_carton()

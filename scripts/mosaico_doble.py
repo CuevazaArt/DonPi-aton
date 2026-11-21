@@ -8,13 +8,15 @@ Uso:
   py -3 scripts/mosaico_doble.py --origen salida/jabali/40cm_carton_30grados_paleta_ceja
 """
 
+import io
 import math
 import re
 import sys
 from pathlib import Path
 
+from PIL import Image
 from pypdf import PageObject, PdfReader, PdfWriter, Transformation
-from pypdf.generic import DecodedStreamObject, DictionaryObject, NameObject
+from pypdf.generic import DecodedStreamObject, DictionaryObject, NameObject, NumberObject, StreamObject
 
 ROOT = Path(__file__).resolve().parents[1]
 HOJA_X_MM = 279.4
@@ -133,7 +135,35 @@ def pdf_texto(texto):
     return texto.replace("\\", "\\\\").replace("(", "\\(").replace(")", "\\)")
 
 
-def marcas(ancho, alto, margen, texto, esquinas=None):
+def limpiar_marca(texto):
+    limpio = "".join(caracter for caracter in texto.upper() if caracter.isascii() and caracter.isalnum())
+    return limpio[:16]
+
+
+def marca_de(origen):
+    if "--marca" in sys.argv:
+        return limpiar_marca(argumento("--marca", ""))
+    archivo = Path(origen) / "MARCA.txt"
+    if archivo.exists():
+        linea = archivo.read_text(encoding="utf-8").strip().split()
+        if linea:
+            return limpiar_marca(linea[0])
+    carpeta = Path(origen)
+    animal = limpiar_marca(carpeta.parent.name)
+    alto = re.match(r"(\d+)cm_", carpeta.name)
+    if animal and alto:
+        return f"{animal}{alto.group(1)}"[:16]
+    return animal or "PROYECTO"
+
+
+def referencia_de(origen):
+    if "--referencia" in sys.argv:
+        return Path(argumento("--referencia", ""))
+    archivo = Path(origen) / "referencia.png"
+    return archivo if archivo.exists() else None
+
+
+def marcas(ancho, alto, margen, texto, esquinas=None, proyecto=""):
     x0, y0 = margen, margen + mm(FRANJA_MM)
     x1, y1 = ancho - margen, alto - margen
     t = mm(6)
@@ -145,6 +175,13 @@ def marcas(ancho, alto, margen, texto, esquinas=None):
         f"{x1:.2f} {y1:.2f} m {x1-t:.2f} {y1:.2f} l {x1:.2f} {y1:.2f} m {x1:.2f} {y1-t:.2f} l S",
         f"BT /F1 8 Tf {margen + mm(2):.2f} {margen:.2f} Td ({pdf_texto(texto)}) Tj ET",
     ]
+    if proyecto:
+        tamano = 14
+        ancho_texto = len(proyecto) * tamano * 0.62
+        x_palabra = max(margen, ancho - margen - ancho_texto)
+        lineas.append(
+            f"BT /F2 {tamano} Tf {x_palabra:.2f} {margen:.2f} Td ({pdf_texto(proyecto)}) Tj ET"
+        )
     anclas = {
         "bl": (x0 + mm(7), y0 + mm(1.2), 1, 1),
         "br": (x1 - mm(7), y0 + mm(1.2), -1, 1),
@@ -171,10 +208,75 @@ def marcas(ancho, alto, margen, texto, esquinas=None):
     fuente[NameObject("/Type")] = NameObject("/Font")
     fuente[NameObject("/Subtype")] = NameObject("/Type1")
     fuente[NameObject("/BaseFont")] = NameObject("/Helvetica")
+    negrita = DictionaryObject()
+    negrita[NameObject("/Type")] = NameObject("/Font")
+    negrita[NameObject("/Subtype")] = NameObject("/Type1")
+    negrita[NameObject("/BaseFont")] = NameObject("/Helvetica-Bold")
     recursos = DictionaryObject()
     fuentes = DictionaryObject()
     fuentes[NameObject("/F1")] = fuente
+    fuentes[NameObject("/F2")] = negrita
     recursos[NameObject("/Font")] = fuentes
+    pagina[NameObject("/Resources")] = recursos
+    return pagina
+
+
+def figura_armada(ancho, alto, ruta, proyecto):
+    """Coloca la vista del modelo armado encima del cuadrado, sin taparlo."""
+    imagen = Image.open(ruta).convert("RGBA")
+    fondo = Image.new("RGB", imagen.size, (255, 255, 255))
+    fondo.paste(imagen, mask=imagen.getchannel("A"))
+    imagen = fondo
+    buffer = io.BytesIO()
+    imagen.thumbnail((900, 700))
+    imagen.save(buffer, format="JPEG", quality=80)
+    datos = buffer.getvalue()
+    flujo_imagen = StreamObject()
+    flujo_imagen.set_data(datos)
+    flujo_imagen.update(
+        {
+            NameObject("/Type"): NameObject("/XObject"),
+            NameObject("/Subtype"): NameObject("/Image"),
+            NameObject("/Width"): NumberObject(imagen.width),
+            NameObject("/Height"): NumberObject(imagen.height),
+            NameObject("/ColorSpace"): NameObject("/DeviceRGB"),
+            NameObject("/BitsPerComponent"): NumberObject(8),
+            NameObject("/Filter"): NameObject("/DCTDecode"),
+        }
+    )
+    carta_alto = mm(279.4)
+    x0, x1 = mm(10), ancho - mm(10)
+    y0, y1 = carta_alto + mm(14), alto - mm(12)
+    proporcion = imagen.width / imagen.height
+    caja_ancho, caja_alto = x1 - x0, y1 - y0
+    if caja_ancho / caja_alto > proporcion:
+        dibujo_alto = caja_alto
+        dibujo_ancho = dibujo_alto * proporcion
+    else:
+        dibujo_ancho = caja_ancho
+        dibujo_alto = dibujo_ancho / proporcion
+    dibujo_x = x0 + (caja_ancho - dibujo_ancho) / 2
+    dibujo_y = y0 + (caja_alto - dibujo_alto) / 2
+    leyenda = f"{proyecto}  figura armada, no se corta"
+    contenido = (
+        f"q {dibujo_ancho:.2f} 0 0 {dibujo_alto:.2f} {dibujo_x:.2f} {dibujo_y:.2f} cm /ImRef Do Q\n"
+        f"BT /F1 11 Tf {(ancho - len(leyenda) * 11 * 0.5) / 2:.2f} {carta_alto + mm(3):.2f} Td ({pdf_texto(leyenda)}) Tj ET"
+    ).encode()
+    flujo = DecodedStreamObject()
+    flujo.set_data(contenido)
+    pagina = PageObject.create_blank_page(width=ancho, height=alto)
+    pagina[NameObject("/Contents")] = flujo
+    fuente = DictionaryObject()
+    fuente[NameObject("/Type")] = NameObject("/Font")
+    fuente[NameObject("/Subtype")] = NameObject("/Type1")
+    fuente[NameObject("/BaseFont")] = NameObject("/Helvetica")
+    fuentes = DictionaryObject()
+    fuentes[NameObject("/F1")] = fuente
+    imagenes = DictionaryObject()
+    imagenes[NameObject("/ImRef")] = flujo_imagen
+    recursos = DictionaryObject()
+    recursos[NameObject("/Font")] = fuentes
+    recursos[NameObject("/XObject")] = imagenes
     pagina[NameObject("/Resources")] = recursos
     return pagina
 
@@ -349,6 +451,8 @@ def mosaico(origen, destino):
     paso_y = ventana_y - solape
 
     escritor = PdfWriter()
+    proyecto = marca_de(origen)
+    figura = referencia_de(origen)
     indice = []
     islas = []
     lectores = []
@@ -451,7 +555,9 @@ def mosaico(origen, destino):
         pagina = lectores[0].pages[0]
         nueva = PageObject.create_blank_page(width=hoja_x, height=hoja_y)
         nueva.merge_transformed_page(pagina, Transformation())
-        nueva.merge_page(marcas(hoja_x, hoja_y, margen, indice[0]))
+        nueva.merge_page(marcas(hoja_x, hoja_y, margen, indice[0], proyecto=proyecto))
+        if figura is not None and figura.exists():
+            nueva.merge_page(figura_armada(hoja_x, hoja_y, figura, proyecto))
         escritor.add_page(nueva)
         print("HOJA", 1, indice[0])
     for cajon in cajones:
@@ -471,7 +577,7 @@ def mosaico(origen, destino):
             )
             nombres.append(rotulo(pieza["nombre"], pieza["isla"]))
         texto = " · ".join(nombres)
-        nueva.merge_page(marcas(hoja_x, hoja_y, margen, texto))
+        nueva.merge_page(marcas(hoja_x, hoja_y, margen, texto, proyecto=proyecto))
         escritor.add_page(nueva)
         indice.append(f"islas enteras  {texto}")
         print("HOJA", len(indice), indice[-1])
@@ -488,7 +594,7 @@ def mosaico(origen, destino):
             pieza["gira"],
             visible,
         )
-        nueva.merge_page(marcas(hoja_x, hoja_y, margen, pieza["texto"], pieza["esquinas"]))
+        nueva.merge_page(marcas(hoja_x, hoja_y, margen, pieza["texto"], pieza["esquinas"], proyecto))
         escritor.add_page(nueva)
         marcas_txt = "  ".join(
             f"{nombre.upper()} {pieza['esquinas'][nombre] or '-'}"
@@ -507,6 +613,12 @@ def mosaico(origen, destino):
             [
                 "Doble carta, 279 x 432 mm, a escala real.",
                 "Imprimir al 100 %, sin ajustar a la pagina.",
+                f"Cada hoja lleva la palabra {proyecto}. Identifica este proyecto si las hojas se mezclan o se voltean.",
+                *(
+                    ["La figura armada de la hoja 1 es referencia. No se corta."]
+                    if figura is not None and figura.exists()
+                    else []
+                ),
                 "La hoja marcada como islas enteras trae una o varias islas completas.",
                 "Cada una se corta por su contorno. Entre ellas hay 2 mm. Esa separacion no se pega.",
                 "La hoja marcada como mosaico es un trozo de una isla que no cupo.",
