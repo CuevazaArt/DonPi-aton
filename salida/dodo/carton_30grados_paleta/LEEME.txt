@@ -1,3 +1,9 @@
+Obra derivada de "dodo block anim" por blam, CC BY 4.0.
+https://sketchfab.com/3d-models/dodo-block-anim-6b63321a76f241a3899193f129e92f7d
+http://creativecommons.org/licenses/by/4.0/
+Cambios: escala de 1 m, disolucion a 30 grados, paleta y plantilla de papel.
+blam y Sketchfab no patrocinan este proyecto.
+
 Dodo a 1.00 m de alto, plantilla a escala real. Disolucion: 30 grados.
 Caras antes de disolver: 646. Despues: 342.
 Cada PDF suelto es una lamina de carton de 1.22 x 2.44 m, a escala real.

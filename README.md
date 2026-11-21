@@ -12,6 +12,18 @@ Imprime este archivo al 100 %, en doble carta (279 × 432 mm):
 
 Son 74 hojas y 17 piezas de corte. La primera hoja trae un cuadrado cuyo interior tiene que medir 100 mm. El armado está en [el manual](docs/MANUAL.md). Papel, cartón y pegamento están en [materiales](docs/MATERIALES.md).
 
+## Ejemplo
+
+El ave de origen, a 1 m, con un color plano por pieza para la inspección. A la derecha, la misma silueta tras disolver aristas a 30°. Abajo, el atlas recoloreado que se hornea en la plantilla.
+
+| Original | Disolución a 30° |
+| --- | --- |
+| ![Dodo original en tres cuartos](salida/dodo/protocolo/vistas/original_tres_cuartos.png) | ![Dodo tras disolver a 30 grados](salida/dodo/protocolo/vistas/equilibrio_30_tres_cuartos.png) |
+
+![Atlas del dodo con la paleta turquesa, magenta y verde lima](salida/dodo/carta_30grados_paleta/textura_paleta.png)
+
+«dodo block anim» por [blam](https://sketchfab.com/Blam577895), bajo [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/). Obra original en [Sketchfab](https://sketchfab.com/3d-models/dodo-block-anim-6b63321a76f241a3899193f129e92f7d). DonPiñaton la modificó: escala de 1 m, simplificación, paleta y plantilla de papel. blam y Sketchfab no patrocinan este repositorio. El detalle está en [créditos](docs/CREDITOS.md).
+
 ## Documentos
 
 | Documento | Para qué |
@@ -20,6 +32,7 @@ Son 74 hojas y 17 piezas de corte. La primera hoja trae un cuadrado cuyo interio
 | [docs/MANUAL.md](docs/MANUAL.md) | Imprimir, cuadrar, pegar, cortar y armar |
 | [docs/EJECUCION.md](docs/EJECUCION.md) | Comandos para volver a generar una plantilla |
 | [docs/MATERIALES.md](docs/MATERIALES.md) | Papel, cartón, cinta y pegamento |
+| [docs/CREDITOS.md](docs/CREDITOS.md) | Autor, licencia CC BY 4.0 y cambios sobre el modelo |
 
 ## Qué hay en el repositorio
 

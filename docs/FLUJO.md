@@ -1,5 +1,7 @@
 # Flujo de trabajo
 
+La malla, la textura y las figuras de este flujo son «dodo block anim» por [blam](https://sketchfab.com/Blam577895), [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/). La acreditación completa está en [créditos](CREDITOS.md).
+
 El dodo entra como un GLB animado de diez cascarones y sale como un PDF que una impresora doméstica puede imprimir a 1 m de alto. Cada paso existe porque el anterior chocaba con un límite real.
 
 ## De dónde sale la malla

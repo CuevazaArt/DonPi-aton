@@ -1,5 +1,7 @@
 # Manual de armado
 
+La plantilla deriva de «dodo block anim» por [blam](https://sketchfab.com/Blam577895), [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/). Cambios y enlace a la obra original: [créditos](CREDITOS.md).
+
 Archivo: `salida/dodo/carton_30grados_paleta/mosaico_doble_carta.pdf`.
 
 74 hojas doble carta. 17 piezas para cortar. El dodo queda a 1.00 m de alto. Imprime al 100 %, sin ajustar a la página.
