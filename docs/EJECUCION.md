@@ -4,23 +4,35 @@ Hace falta Blender 5.3, en `C:\Program Files\Blender Foundation\Blender 5.3\blen
 
 El generador corre dentro de Blender, porque usa `bpy`. El mosaico corre en el Python del sistema, porque solo reescribe PDF.
 
-## Plantilla recomendada
+## Plantilla del flujo común
 
-Desdobla a 30° sobre la lámina de cartón y hornea la paleta:
+La malla se disuelve al ángulo que aprobó el protocolo. `--ceja-triangular` solo cambia las solapas de pegado: cada trapecio pasa a triángulo y la base queda como doblez.
 
-```
-& "C:\Program Files\Blender Foundation\Blender 5.3\blender.exe" --background --python scripts/generar_plantilla_dodo.py -- --carton --angulo 30 --paleta
-```
-
-Eso escribe `salida/dodo/carton_30grados_paleta/` y el modelo `modelos/dodo/dodo_1m_30grados_paleta_carton.obj`.
-
-Parte esas láminas en doble carta:
+Jabalí a 50 cm:
 
 ```
-py -3 scripts/mosaico_doble.py --origen salida/dodo/carton_30grados_paleta --destino salida/dodo/carton_30grados_paleta/mosaico_doble_carta.pdf
+& "C:\Program Files\Blender Foundation\Blender 5.3\blender.exe" --background --python scripts/generar_plantilla_dodo.py -- --animal jabali --modelo "C:\Users\lexar\Downloads\jabali\boar_block__anim.glb" --alto 0.5 --carton --angulo 30 --paleta --ceja-triangular
 ```
 
-El script también reescribe `MOSAICO.txt` junto al PDF. La hoja 1 del mosaico es `00_prueba_100mm.pdf`.
+```
+py -3 scripts/mosaico_doble.py --origen salida/jabali/carton_30grados_paleta_ceja --destino salida/jabali/carton_30grados_paleta_ceja/mosaico_doble_carta.pdf
+```
+
+Eso escribe el mosaico de 57 hojas y el modelo `modelos/jabali/jabali_50cm_30grados_paleta_ceja_carton.obj`. El GLB de origen está en `C:\Users\lexar\Downloads\jabali\boar_block__anim.glb`.
+
+El mismo flujo para el dodo de 1 m, con solapas triangulares:
+
+```
+& "C:\Program Files\Blender Foundation\Blender 5.3\blender.exe" --background --python scripts/generar_plantilla_dodo.py -- --animal dodo --modelo "C:\Users\lexar\Downloads\dodo3d\dodo_block_anim.glb" --alto 1 --carton --angulo 30 --paleta --ceja-triangular
+```
+
+```
+py -3 scripts/mosaico_doble.py --origen salida/dodo/carton_30grados_paleta_ceja --destino salida/dodo/carton_30grados_paleta_ceja/mosaico_doble_carta.pdf
+```
+
+El mosaico del dodo que ya está en `salida/dodo/carton_30grados_paleta/` se generó sin `--ceja-triangular`. Sus solapas siguen en trapecio.
+
+El script del mosaico también reescribe `MOSAICO.txt` junto al PDF. La hoja 1 es `00_prueba_100mm.pdf`.
 
 Si falta pypdf:
 
@@ -42,6 +54,10 @@ Los argumentos van después de `--`, que es lo que Blender entrega al script.
 | `--doble` | `salida/dodo/doble_45grados`, 45° y fusión de 8 mm si no se piden otros valores |
 | `--doble --angulo 30 --fusion 0` | doble carta, 30°, sin unir vértices |
 | `--fusion 8` | une vértices a menos de 8 mm; con `--doble` ese valor ya es el predeterminado |
+| `--animal jabali` | nombres, carpeta `salida/jabali/` y crédito del jabalí |
+| `--modelo RUTA` y `--alto 0.5` | GLB de origen y altura en metros |
+| `--ceja-triangular` | solapas de pegado en triángulo; la malla no cambia |
+| `--salida RUTA` en el protocolo | carpeta del informe; por defecto `salida/dodo/protocolo` |
 
 `--angulo 0` deja la malla sin disolver. En carta, una arista de más de 150 mm se subdivide para caber en la hoja. En cartón y en doble carta el límite es la diagonal útil de la hoja, al 90 %, para no agregar dobleces de más.
 
@@ -51,7 +67,7 @@ Los argumentos van después de `--`, que es lo que Blender entrega al script.
 & "C:\Program Files\Blender Foundation\Blender 5.3\blender.exe" --background --python scripts/protocolo_silueta.py -- --modelo "C:\Users\lexar\Downloads\dodo3d\dodo_block_anim.glb" --alto 1
 ```
 
-Escribe `salida/dodo/protocolo/informe.txt`. `--modelo` y `--alto` tienen esos valores por defecto.
+Escribe `salida/dodo/protocolo/informe.txt`. `--modelo` y `--alto` tienen esos valores por defecto. Para el jabalí se usó `--salida salida/jabali/protocolo` y `--alto 0.5`.
 
 Las vistas comparadas salen con:
 

@@ -1172,6 +1172,10 @@ class Arrow:
         self.bounds = [self.center, self.center + (1.2 * normal + tangent) * size, self.center + (1.2 * normal - tangent) * size]
 
 
+# La solapa de pegado sale en triangulo: dos cortes y la base queda como doblez.
+CEJA_TRIANGULAR = False
+
+
 class Sticker:
     """Mark in the document: sticker tab"""
     __slots__ = ('bounds', 'center', 'points', 'rot', 'text', 'width')
@@ -1225,6 +1229,10 @@ class Sticker:
             self.points = [second_vertex.co, v3, v4, first_vertex.co]
         else:
             self.points = [second_vertex.co, v3, first_vertex.co]
+        if CEJA_TRIANGULAR and len(self.points) == 4:
+            cima = (v3 + v4) / 2
+            self.points = [second_vertex.co, cima, first_vertex.co]
+            v3 = v4 = cima
 
         sin, cos = edge.y / edge.length, edge.x / edge.length
         self.rot = M.Matrix(((cos, -sin), (sin, cos)))

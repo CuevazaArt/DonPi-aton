@@ -26,6 +26,19 @@ DonPiñaton modificó la obra para convertirla en plantilla de papel:
 - vistas de inspección con un color plano por pieza
 - desdoble a escala real, con solapas de 12 mm, y mosaico en doble carta
 
+## Jabalí
+
+| | |
+| --- | --- |
+| Título | boar block anim |
+| Autor | [blam](https://sketchfab.com/Blam577895) |
+| Origen | [Sketchfab, modelo a294b1f](https://sketchfab.com/3d-models/boar-block-anim-a294b1f7ea2241c6bf5245e7a4923366) |
+| Licencia | [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/) |
+
+El título dentro del GLB lleva dos espacios: «boar block  anim». DonPiñaton lo modificó: escala a 0.50 m de alto, disolución a 30°, paleta y plantilla con solapas triangulares. blam y Sketchfab no patrocinan este proyecto.
+
+Cubre `modelos/jabali/` y `salida/jabali/`.
+
 ## Qué cubre esta acreditación
 
 Todo lo que sale de esa malla:

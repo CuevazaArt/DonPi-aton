@@ -31,6 +31,24 @@ CARTON_Y = 2.44
 MARGEN_M = 0.010
 SOLAPA_M = 0.012
 
+JABALI_NOMBRES = {
+    "hog_body_HogMAt_0": "01_cuerpo",
+    "hog_tail_HogMAt_0": "02_cola",
+    "Sedlo_SedloMat_0": "03_montura",
+    "hog_1_HogMAt_0": "04_pata_1_muslo",
+    "hog_11_HogMAt_0": "05_pata_1_canilla",
+    "hog_111_HogMAt_0": "06_pata_1_pie",
+    "hog_3_HogMAt_0": "07_pata_3_muslo",
+    "hog_33_HogMAt_0": "08_pata_3_canilla",
+    "hog_333_HogMAt_0": "09_pata_3_pie",
+    "hog_2_HogMAt_0": "10_pata_2_muslo",
+    "hog_22_HogMAt_0": "11_pata_2_canilla",
+    "hog_222_HogMAt_0": "12_pata_2_pie",
+    "hog_4_HogMAt_0": "13_pata_4_muslo",
+    "hog_44_HogMAt_0": "14_pata_4_canilla",
+    "hog_444_HogMAt_0": "15_pata_4_pie",
+}
+
 NOMBRES = {
     "dodo_body_DodoMat_0": "01_cuerpo",
     "dodo_head_DodoMat_0": "02_cabeza",
@@ -178,10 +196,25 @@ def disolver_planos(obj, grados):
     return antes, len(obj.data.polygons)
 
 
+def ceja_triangular_pedida():
+    return "--ceja-triangular" in resto_argv()
+
+
+def activar_ceja_triangular():
+    sys.modules["io_export_paper_model"].CEJA_TRIANGULAR = ceja_triangular_pedida()
+
+
 def resto_argv():
     if "--" not in sys.argv:
         return []
     return sys.argv[sys.argv.index("--") + 1 :]
+
+
+def argumento(nombre, defecto):
+    resto = resto_argv()
+    if nombre in resto:
+        return resto[resto.index(nombre) + 1]
+    return defecto
 
 
 def angulo_pedido():
@@ -381,13 +414,19 @@ def unir(objetos):
 
 
 def main():
-    global OUT
+    global OUT, MODELOS
+    animal = argumento("--animal", "dodo")
+    alto_pedido = float(argumento("--alto", str(ALTO_M)))
+    origen = Path(argumento("--modelo", str(SRC)))
+    nombres = JABALI_NOMBRES if animal == "jabali" else NOMBRES
     angulo = angulo_pedido()
     sufijo = f"_{int(angulo)}grados" if angulo else ""
     if paleta_pedida():
         sufijo += "_paleta"
     elif con_textura():
         sufijo += "_textura"
+    if ceja_triangular_pedida():
+        sufijo += "_ceja"
     if hoja_carton():
         carpeta = "carton"
         sufijo += "_carton"
@@ -396,16 +435,18 @@ def main():
         sufijo += "_doble"
     else:
         carpeta = "carta"
-    OUT = ROOT / "salida" / "dodo" / f"{carpeta}{sufijo.replace('_carton', '').replace('_doble', '')}"
+    OUT = ROOT / "salida" / animal / f"{carpeta}{sufijo.replace('_carton', '').replace('_doble', '')}"
+    MODELOS = ROOT / "modelos" / animal
     OUT.mkdir(parents=True, exist_ok=True)
     MODELOS.mkdir(parents=True, exist_ok=True)
     activar_desdoblador()
+    activar_ceja_triangular()
 
     bpy.ops.wm.read_factory_settings(use_empty=True)
     escena = bpy.context.scene
     escena.unit_settings.system = "METRIC"
     escena.unit_settings.scale_length = 1.0
-    bpy.ops.import_scene.gltf(filepath=str(SRC))
+    bpy.ops.import_scene.gltf(filepath=str(origen))
     if paleta_pedida():
         aplicar_paleta()
 
@@ -425,7 +466,7 @@ def main():
         )
     )
     alto = max(v.z for v in coordenadas) - minimo.z
-    factor = ALTO_M / alto
+    factor = alto_pedido / alto
     for obj in piezas:
         for vertice in obj.data.vertices:
             vertice.co = (vertice.co - minimo) * factor
@@ -440,7 +481,7 @@ def main():
         caras_despues += despues
         print(f"DISUELTO {obj.name}: {antes} -> {despues}")
         partir_aristas_largas(obj, limite_arista())
-        nombre = NOMBRES.get(obj.name, obj.name)
+        nombre = nombres.get(obj.name, obj.name)
         obj.name = nombre
         obj.data.name = nombre
         if not con_textura():
@@ -515,7 +556,7 @@ def main():
         obj.select_set(True)
     bpy.context.view_layer.objects.active = piezas[0]
     bpy.ops.wm.obj_export(
-        filepath=str(MODELOS / f"dodo_1m{sufijo}.obj"),
+        filepath=str(MODELOS / f"{animal}_{int(round(alto_pedido * 100))}cm{sufijo}.obj"),
         export_selected_objects=True,
         forward_axis="NEGATIVE_Y",
         up_axis="Z",
@@ -523,7 +564,7 @@ def main():
         export_materials=True,
         apply_modifiers=True,
     )
-    bpy.ops.wm.save_as_mainfile(filepath=str(MODELOS / f"dodo_1m{sufijo}.blend"))
+    bpy.ops.wm.save_as_mainfile(filepath=str(MODELOS / f"{animal}_{int(round(alto_pedido * 100))}cm{sufijo}.blend"))
 
     cartulina = 1.22 * 2.44
     hojas_carton = area_total * 1.45 / cartulina
@@ -531,7 +572,14 @@ def main():
     texto.write_text(
         "\n".join(
             [
-                f"Dodo a 1.00 m de alto, plantilla a escala real. Disolucion: {angulo:.0f} grados.",
+                f"{'Jabali' if animal == 'jabali' else 'Dodo'} a {alto_pedido:.2f} m de alto, plantilla a escala real. Disolucion: {angulo:.0f} grados.",
+                *(
+                    [
+                        "Las solapas de pegado pasan de trapecio a triangulo: se quita el lado corto exterior y la base sigue siendo el doblez. La malla conserva la disolucion.",
+                    ]
+                    if ceja_triangular_pedida()
+                    else []
+                ),
                 *(
                     [
                         f"Vertices a menos de {fusion_m()*1000:.0f} mm se unen antes de disolver, para quitar escalones pequenos.",
@@ -568,7 +616,11 @@ def main():
                 *(
                     [
                         (
-                            "Cada cara lleva una paleta alternativa: cuerpo turquesa, pico y patas magenta, cara verde lima."
+                            (
+                                "Cada cara lleva la paleta alternativa del proyecto: grises a turquesa, tonos calidos a magenta, amarillos a verde lima. El negro se conserva."
+                                if animal == "jabali"
+                                else "Cada cara lleva una paleta alternativa: cuerpo turquesa, pico y patas magenta, cara verde lima."
+                            )
                             if paleta_pedida()
                             else "Cada cara lleva la textura original del modelo, horneada a 150 ppp."
                         ),
@@ -591,13 +643,35 @@ def main():
                 "Las piezas son cascarones cerrados. Se unen entre si por la posicion del modelo.",
                 f"Area de cartulina: {area_total:.2f} m2.",
                 f"Con solapas y recorte, cerca de {hojas_carton:.1f} laminas de 1.22 x 2.44 m.",
-                "Pata A es el lado X positivo del archivo. Pata B es el lado X negativo.",
+                (
+                    "La cola queda hacia +Y y el hocico hacia -Y. Las patas 1 y 3 estan del lado del hocico: la 1 en +X y la 3 en -X. Las patas 2 y 4 estan del lado de la cola."
+                    if animal == "jabali"
+                    else "Pata A es el lado X positivo del archivo. Pata B es el lado X negativo."
+                ),
                 "",
                 *lineas,
             ]
         ),
         encoding="utf-8",
     )
+    if animal == "jabali":
+        credito = OUT / "CREDITOS.txt"
+        credito.write_text(
+            "\n".join(
+                [
+                    'Obra derivada de "boar block  anim" por blam, CC BY 4.0.',
+                    "https://sketchfab.com/Blam577895",
+                    "https://sketchfab.com/3d-models/boar-block-anim-a294b1f7ea2241c6bf5245e7a4923366",
+                    "http://creativecommons.org/licenses/by/4.0/",
+                    "La licencia incluye un descargo de garantias: https://creativecommons.org/licenses/by/4.0/legalcode",
+                    f"Cambios: escala a {alto_pedido:.2f} m de alto, disolucion, paleta y plantilla de papel.",
+                    "blam y Sketchfab no patrocinan este proyecto.",
+                    "",
+                ]
+            ),
+            encoding="utf-8",
+        )
+        texto.write_text(credito.read_text(encoding="utf-8") + texto.read_text(encoding="utf-8"), encoding="utf-8")
     print("LISTO", texto)
 
 

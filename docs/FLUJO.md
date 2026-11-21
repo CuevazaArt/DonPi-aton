@@ -4,6 +4,24 @@ La malla, la textura y las figuras de este flujo son «dodo block anim» por [bl
 
 El dodo entra como un GLB animado de diez cascarones y sale como un PDF que una impresora doméstica puede imprimir a 1 m de alto. Cada paso existe porque el anterior chocaba con un límite real.
 
+## Flujo común
+
+Desde esta versión, una plantilla nueva se genera en este orden:
+
+1. El protocolo de silueta elige la disolución. Para estos modelos de bloques, 30° conserva la silueta. Colapsar caras abre huecos y se descarta. La forma del modelo se queda como la dejó esa disolución.
+2. La paleta reescribe el atlas: grises a turquesa, tonos cálidos a magenta, amarillos a verde lima, y el negro se conserva.
+3. El desdoble va a una lámina de cartón de 1.22 × 2.44 m, a escala 1:1, con margen de 10 mm.
+4. `--ceja-triangular` convierte cada solapa de pegado de trapecio a triángulo. Se quita el lado corto exterior. La base sigue siendo el doblez y se pega con el mismo número. La tijera hace dos cortes en la solapa. La malla no se toca.
+5. `scripts/mosaico_doble.py` reparte cada isla en doble carta, con 15 mm de solape y claves de esquina. Se imprime al 100 %. La hoja 1 es el cuadrado de 100 mm.
+
+El dodo publicado en `v0.1.0` se armó antes de este paso de la solapa: su mosaico todavía trae solapas trapecio. El jabalí de 50 cm es la primera plantilla del flujo completo.
+
+## El jabalí
+
+«boar block anim» por [blam](https://sketchfab.com/Blam577895), [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/). Origen en [Sketchfab](https://sketchfab.com/3d-models/boar-block-anim-a294b1f7ea2241c6bf5245e7a4923366). El informe del protocolo está en `salida/jabali/protocolo/informe.txt`: a 0.50 m, disolver a 30° deja 424 caras y una silueta de 0.992. El colapso queda por debajo de 0.90 y se rechaza.
+
+La plantilla es `salida/jabali/carton_30grados_paleta_ceja/mosaico_doble_carta.pdf`. 57 hojas doble carta, 25 islas (el cuerpo en 11). Alto 50 cm, largo cerca de 68 cm, ancho cerca de 57 cm. Cartulina cerca de 1.00 m². La cola queda hacia +Y y el hocico hacia −Y. Las patas 1 y 3 están del lado del hocico; la 2 y la 4, del lado de la cola. La montura es la malla Sedlo.
+
 ## De dónde sale la malla
 
 Blender 5.3 importa `dodo_block_anim.glb`, hornea la posición de cada pieza al mundo y escala el conjunto hasta 1.00 m de alto. La unidad de Blender es el metro. El desdoble escribe milímetros reales en el PDF: la primera matriz del archivo es 2.834646, que convierte milímetros a puntos tipográficos.

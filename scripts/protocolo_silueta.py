@@ -357,7 +357,7 @@ def main():
         print("NIVEL", medida)
 
     ganador, viables = elegir(filas)
-    salida = ROOT / "salida" / "dodo" / "protocolo"
+    salida = Path(argumento("--salida", str(ROOT / "salida" / "dodo" / "protocolo")))
     salida.mkdir(parents=True, exist_ok=True)
     informe = {
         "modelo": str(ruta),

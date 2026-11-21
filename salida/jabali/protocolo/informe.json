@@ -1,0 +1,134 @@
+{
+  "modelo": "C:\\Users\\lexar\\Downloads\\jabali\\boar_block__anim.glb",
+  "alto_m": 0.5,
+  "reglas": {
+    "silueta_minima": 0.93,
+    "banda_de_empate": 0.015,
+    "cambio_maximo_de_caja": 0.03,
+    "area_minima": 0.9,
+    "criterio": "Entre las versiones que conservan la silueta, la de menos caras."
+  },
+  "niveles": [
+    {
+      "caras": 668,
+      "area_m2": 0.996,
+      "area_ratio": 1.0,
+      "caja_mm": [
+        573,
+        679,
+        500
+      ],
+      "caja_delta_max": 0.0,
+      "iou": {
+        "frente": 1.0,
+        "lado": 1.0,
+        "planta": 1.0
+      },
+      "iou_min": 1.0,
+      "hojas_estimadas": 215,
+      "nombre": "original"
+    },
+    {
+      "caras": 570,
+      "area_m2": 0.996,
+      "area_ratio": 1.0,
+      "caja_mm": [
+        573,
+        679,
+        500
+      ],
+      "caja_delta_max": 0.0,
+      "iou": {
+        "frente": 0.9995,
+        "lado": 0.9985,
+        "planta": 0.9992
+      },
+      "iou_min": 0.9985,
+      "hojas_estimadas": 200,
+      "nombre": "disolver_5"
+    },
+    {
+      "caras": 476,
+      "area_m2": 0.995,
+      "area_ratio": 0.9994,
+      "caja_mm": [
+        573,
+        679,
+        500
+      ],
+      "caja_delta_max": 0.0,
+      "iou": {
+        "frente": 0.9993,
+        "lado": 0.9981,
+        "planta": 0.9989
+      },
+      "iou_min": 0.9981,
+      "hojas_estimadas": 174,
+      "nombre": "disolver_15"
+    },
+    {
+      "caras": 424,
+      "area_m2": 0.998,
+      "area_ratio": 1.0023,
+      "caja_mm": [
+        573,
+        679,
+        500
+      ],
+      "caja_delta_max": 0.0,
+      "iou": {
+        "frente": 0.9956,
+        "lado": 0.9917,
+        "planta": 0.9985
+      },
+      "iou_min": 0.9917,
+      "hojas_estimadas": 157,
+      "nombre": "disolver_30"
+    },
+    {
+      "caras": 235,
+      "area_m2": 0.706,
+      "area_ratio": 0.709,
+      "caja_mm": [
+        594,
+        754,
+        521
+      ],
+      "caja_delta_max": 0.1109,
+      "iou": {
+        "frente": 0.9281,
+        "lado": 0.8973,
+        "planta": 0.9124
+      },
+      "iou_min": 0.8973,
+      "hojas_estimadas": 113,
+      "nombre": "disolver_15_y_colapsar_50"
+    },
+    {
+      "caras": 128,
+      "area_m2": 0.443,
+      "area_ratio": 0.445,
+      "caja_mm": [
+        641,
+        754,
+        530
+      ],
+      "caja_delta_max": 0.1187,
+      "iou": {
+        "frente": 0.7901,
+        "lado": 0.8105,
+        "planta": 0.7751
+      },
+      "iou_min": 0.7751,
+      "hojas_estimadas": 70,
+      "nombre": "disolver_15_y_colapsar_25"
+    }
+  ],
+  "viables": [
+    "original",
+    "disolver_5",
+    "disolver_15",
+    "disolver_30"
+  ],
+  "elegido": "disolver_30"
+}
