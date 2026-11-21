@@ -1,0 +1,29 @@
+Dodo a 1.00 m de alto, plantilla a escala real. Disolucion: 30 grados.
+Caras antes de disolver: 646. Despues: 342.
+Cada PDF suelto es una lamina de carton de 1.22 x 2.44 m, a escala real.
+Para la impresora domestica usa mosaico_doble_carta.pdf: 74 hojas doble carta, con 15 mm de solape.
+El borde de esas hojas se pega. No se corta.
+La esquina que toca otra hoja lleva una clave de cuatro signos. La misma clave va en la hoja vecina.
+El corte es el contorno de cada isla. El borde de la lamina no se recorta si no hay linea.
+Dentro de la isla, la linea continua se corta y la punteada se dobla.
+00_prueba_100mm.pdf sigue siendo carta: el cuadrado interior tiene que medir 100 mm.
+Cada cara lleva una paleta alternativa: cuerpo turquesa, pico y patas magenta, cara verde lima.
+Las solapas quedan sin imagen para que se lean el corte, el doblez y el numero.
+Primero imprime 00_prueba_100mm.pdf y mide el cuadrado: tiene que dar 100 mm.
+Las solapas miden 12 mm. El numero de una arista se pega con el mismo numero.
+Recorta cada isla por su contorno, dobla las lineas punteadas y pega las solapas con el mismo numero.
+Las piezas son cascarones cerrados. Se unen entre si por la posicion del modelo.
+Area de cartulina: 2.42 m2.
+Con solapas y recorte, cerca de 1.2 laminas de 1.22 x 2.44 m.
+Pata A es el lado X positivo del archivo. Pata B es el lado X negativo.
+
+01_cuerpo: 4 islas {'FINISHED'}; 152 caras; caja 462 x 954 x 628 mm; arista maxima 462 mm; area 1.383 m2
+02_cabeza: 5 islas {'FINISHED'}; 126 caras; caja 245 x 421 x 425 mm; arista maxima 140 mm; area 0.331 m2
+03_pieza_frontal: 1 islas {'FINISHED'}; 39 caras; caja 250 x 432 x 275 mm; arista maxima 302 mm; area 0.200 m2
+04_pieza_lateral: 1 islas {'FINISHED'}; 39 caras; caja 133 x 449 x 324 mm; arista maxima 302 mm; area 0.200 m2
+05_pata_a_muslo: 1 islas {'FINISHED'}; 21 caras; caja 169 x 178 x 259 mm; arista maxima 173 mm; area 0.095 m2
+06_pata_a_canilla: 1 islas {'FINISHED'}; 13 caras; caja 93 x 62 x 154 mm; arista maxima 120 mm; area 0.025 m2
+07_pata_a_pie: 1 islas {'FINISHED'}; 38 caras; caja 121 x 240 x 78 mm; arista maxima 233 mm; area 0.034 m2
+08_pata_b_muslo: 1 islas {'FINISHED'}; 21 caras; caja 160 x 179 x 264 mm; arista maxima 173 mm; area 0.095 m2
+09_pata_b_canilla: 1 islas {'FINISHED'}; 13 caras; caja 88 x 59 x 155 mm; arista maxima 120 mm; area 0.025 m2
+10_pata_b_pie: 1 islas {'FINISHED'}; 38 caras; caja 127 x 238 x 76 mm; arista maxima 233 mm; area 0.034 m2

@@ -1,0 +1,20 @@
+Dodo a 1.00 m de alto, plantilla a escala real.
+Imprimir en hoja carta, calidad media, al 100 %, sin ajustar a la pagina.
+Primero imprime 00_prueba_100mm.pdf y mide el cuadrado: tiene que dar 100 mm.
+Las solapas miden 12 mm. El numero de una arista se pega con el mismo numero.
+Recorta cada pieza, pegala sobre el carton de 1.22 x 2.44 m y corta el carton.
+Las piezas son cascarones cerrados. Se unen entre si por la posicion del modelo.
+Area de cartulina: 2.44 m2.
+Con solapas y recorte, cerca de 1.2 laminas de 1.22 x 2.44 m.
+Pata A es el lado X positivo del archivo. Pata B es el lado X negativo.
+
+01_cuerpo: generado {'FINISHED'}; 264 caras; caja 462 x 954 x 628 mm; arista maxima 149 mm; area 1.391 m2
+02_cabeza: generado {'FINISHED'}; 156 caras; caja 245 x 421 x 425 mm; arista maxima 140 mm; area 0.331 m2
+03_pieza_frontal: generado {'FINISHED'}; 62 caras; caja 250 x 432 x 275 mm; arista maxima 146 mm; area 0.205 m2
+04_pieza_lateral: generado {'FINISHED'}; 62 caras; caja 133 x 449 x 324 mm; arista maxima 146 mm; area 0.205 m2
+05_pata_a_muslo: generado {'FINISHED'}; 34 caras; caja 169 x 178 x 259 mm; arista maxima 149 mm; area 0.095 m2
+06_pata_a_canilla: generado {'FINISHED'}; 14 caras; caja 93 x 62 x 154 mm; arista maxima 120 mm; area 0.025 m2
+07_pata_a_pie: generado {'FINISHED'}; 46 caras; caja 121 x 240 x 78 mm; arista maxima 120 mm; area 0.032 m2
+08_pata_b_muslo: generado {'FINISHED'}; 34 caras; caja 160 x 179 x 264 mm; arista maxima 149 mm; area 0.095 m2
+09_pata_b_canilla: generado {'FINISHED'}; 14 caras; caja 88 x 59 x 155 mm; arista maxima 120 mm; area 0.025 m2
+10_pata_b_pie: generado {'FINISHED'}; 46 caras; caja 127 x 238 x 76 mm; arista maxima 120 mm; area 0.032 m2

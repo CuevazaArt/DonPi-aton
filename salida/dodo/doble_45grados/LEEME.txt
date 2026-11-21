@@ -1,0 +1,26 @@
+Dodo de 99 cm de alto, 58 cm de ancho y 107 cm de fondo. Plantilla a escala real. Disolucion: 45 grados.
+Vertices a menos de 8 mm se unen antes de disolver, para quitar escalones pequenos.
+Caras antes de disolver: 646. Despues: 113.
+Imprimir en doble carta, 279 x 432 mm, al 100 %, sin ajustar a la pagina.
+Las islas grandes ocupan una hoja. Las piezas chicas, incluida la prueba de 100 mm, comparten hoja.
+El titulo de cada isla nombra la parte: 01_cuerpo, 02_cabeza, las patas y 00_prueba_100mm.
+El cuadrado de 00_prueba_100mm tiene que medir 100 mm por dentro.
+Antes de recortar el dodo, mide el cuadrado de prueba en plantilla.pdf.
+Las solapas miden 12 mm. El numero de una arista se pega con el mismo numero.
+Recorta cada pieza, pegala sobre el carton de 1.22 x 2.44 m y corta el carton.
+Las piezas son cascarones cerrados. Se unen entre si por la posicion del modelo.
+Area de cartulina: 2.04 m2.
+Con solapas y recorte, cerca de 1.0 laminas de 1.22 x 2.44 m.
+Pata A es el lado X positivo del archivo. Pata B es el lado X negativo.
+
+plantilla.pdf: 55 hojas doble carta, 60 islas {'FINISHED'}.
+01_cuerpo: 55 caras; caja 462 x 954 x 585 mm; arista maxima 384 mm; area 1.150 m2
+02_cabeza: 53 caras; caja 244 x 393 x 414 mm; arista maxima 393 mm; area 0.281 m2
+03_pieza_frontal: 20 caras; caja 250 x 399 x 275 mm; arista maxima 281 mm; area 0.187 m2
+04_pieza_lateral: 20 caras; caja 111 x 429 x 324 mm; arista maxima 281 mm; area 0.187 m2
+05_pata_a_muslo: 9 caras; caja 119 x 178 x 259 mm; arista maxima 268 mm; area 0.061 m2
+06_pata_a_canilla: 11 caras; caja 93 x 62 x 154 mm; arista maxima 157 mm; area 0.023 m2
+07_pata_a_pie: 42 caras; caja 121 x 240 x 78 mm; arista maxima 118 mm; area 0.032 m2
+08_pata_b_muslo: 9 caras; caja 101 x 179 x 264 mm; arista maxima 268 mm; area 0.061 m2
+09_pata_b_canilla: 11 caras; caja 88 x 59 x 155 mm; arista maxima 157 mm; area 0.023 m2
+10_pata_b_pie: 42 caras; caja 127 x 238 x 76 mm; arista maxima 118 mm; area 0.032 m2
