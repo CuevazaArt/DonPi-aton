@@ -1,0 +1,47 @@
+Obra derivada de "boar block  anim" por blam, CC BY 4.0.
+https://sketchfab.com/Blam577895
+https://sketchfab.com/3d-models/boar-block-anim-a294b1f7ea2241c6bf5245e7a4923366
+http://creativecommons.org/licenses/by/4.0/
+La licencia incluye un descargo de garantias: https://creativecommons.org/licenses/by/4.0/legalcode
+Cambios: escala a 0.40 m de alto, disolucion, paleta y plantilla de papel.
+blam y Sketchfab no patrocinan este proyecto.
+Jabali a 0.40 m de alto, plantilla a escala real. Disolucion: 30 grados.
+Las solapas de pegado pasan de trapecio a triangulo: se quita el lado corto exterior y la base sigue siendo el doblez. La malla conserva la disolucion.
+Caras antes de disolver: 668. Despues: 424.
+Cada PDF suelto es una lamina de carton de 1.22 x 2.44 m, a escala real.
+Para la impresora domestica usa mosaico_doble_carta.pdf: 26 hojas doble carta, con la paleta.
+La hoja 1 es el cuadrado de 100 mm.
+Siete hojas traen las 20 islas que caben enteras. Si hay varias en la misma hoja, se corta cada contorno y el papel de en medio se descarta. Van separadas 2 mm. Esas hojas no llevan clave.
+Dieciocho hojas parten las cinco islas que no caben: cuerpo 9 en 8, cuerpo 7 en 4, montura en 2, y los muslos de las patas 1 y 3 en 2 cada uno.
+En esas hojas el solape es de 15 mm. El borde se pega. No se corta.
+La esquina que toca otra hoja lleva una clave de cuatro signos. La misma clave va en la hoja vecina.
+La lista hoja por hoja esta en MOSAICO.txt.
+Son 25 islas para cortar: el cuerpo queda en 11 y cada otra pieza en una.
+El corte es el contorno de cada isla. El borde de la lamina no se recorta si no hay linea.
+Dentro de la isla, la linea continua se corta y la punteada se dobla.
+00_prueba_100mm.pdf sigue siendo carta: el cuadrado interior tiene que medir 100 mm.
+Cada cara lleva la paleta alternativa del proyecto: grises a turquesa, tonos calidos a magenta, amarillos a verde lima. El negro se conserva.
+Las solapas quedan sin imagen para que se lean el corte, el doblez y el numero.
+Primero imprime 00_prueba_100mm.pdf y mide el cuadrado: tiene que dar 100 mm.
+Las solapas miden 12 mm. El numero de una arista se pega con el mismo numero.
+Recorta cada isla por su contorno, dobla las lineas punteadas y pega las solapas con el mismo numero.
+Las piezas son cascarones cerrados. Se unen entre si por la posicion del modelo.
+Area de cartulina: 0.64 m2.
+Con solapas y recorte, cerca de 0.3 laminas de 1.22 x 2.44 m.
+La cola queda hacia +Y y el hocico hacia -Y. Las patas 1 y 3 estan del lado del hocico: la 1 en +X y la 3 en -X. Las patas 2 y 4 estan del lado de la cola.
+
+01_cuerpo: 11 islas {'FINISHED'}; 261 caras; caja 312 x 489 x 355 mm; arista maxima 164 mm; area 0.328 m2
+02_cola: 1 islas {'FINISHED'}; 33 caras; caja 66 x 61 x 34 mm; arista maxima 29 mm; area 0.003 m2
+03_montura: 1 islas {'FINISHED'}; 34 caras; caja 131 x 140 x 136 mm; arista maxima 95 mm; area 0.046 m2
+04_pata_1_muslo: 1 islas {'FINISHED'}; 35 caras; caja 121 x 98 x 151 mm; arista maxima 92 mm; area 0.043 m2
+05_pata_1_canilla: 1 islas {'FINISHED'}; 16 caras; caja 85 x 61 x 77 mm; arista maxima 77 mm; area 0.016 m2
+06_pata_1_pie: 1 islas {'FINISHED'}; 13 caras; caja 68 x 61 x 73 mm; arista maxima 62 mm; area 0.013 m2
+07_pata_3_muslo: 1 islas {'FINISHED'}; 35 caras; caja 140 x 94 x 145 mm; arista maxima 92 mm; area 0.043 m2
+08_pata_3_canilla: 1 islas {'FINISHED'}; 16 caras; caja 84 x 61 x 73 mm; arista maxima 77 mm; area 0.016 m2
+09_pata_3_pie: 1 islas {'FINISHED'}; 13 caras; caja 66 x 67 x 73 mm; arista maxima 62 mm; area 0.013 m2
+10_pata_2_muslo: 1 islas {'FINISHED'}; 35 caras; caja 134 x 120 x 115 mm; arista maxima 78 mm; area 0.039 m2
+11_pata_2_canilla: 1 islas {'FINISHED'}; 16 caras; caja 77 x 60 x 68 mm; arista maxima 67 mm; area 0.012 m2
+12_pata_2_pie: 1 islas {'FINISHED'}; 13 caras; caja 51 x 48 x 61 mm; arista maxima 53 mm; area 0.008 m2
+13_pata_4_muslo: 1 islas {'FINISHED'}; 35 caras; caja 144 x 113 x 107 mm; arista maxima 78 mm; area 0.039 m2
+14_pata_4_canilla: 1 islas {'FINISHED'}; 16 caras; caja 77 x 60 x 65 mm; arista maxima 67 mm; area 0.012 m2
+15_pata_4_pie: 1 islas {'FINISHED'}; 13 caras; caja 51 x 48 x 62 mm; arista maxima 53 mm; area 0.008 m2

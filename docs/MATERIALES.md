@@ -1,6 +1,6 @@
 # Materiales
 
-Cantidades para el dodo de 1 m, plantilla de 30° con paleta. El jabalí de 50 cm, con solapas triangulares, usa 57 hojas doble carta y cerca de 1.00 m² de cartulina: basta una lámina de 1.22 × 2.44 m.
+Cantidades para el dodo de 1 m, plantilla de 30° con paleta. El jabalí de 50 cm, con solapas triangulares, usa 57 hojas doble carta y cerca de 1.00 m² de cartulina: basta una lámina de 1.22 × 2.44 m. El de 40 cm, ya acomodado, usa 26 hojas doble carta y cerca de 0.64 m².
 
 ## Papel de la plantilla
 

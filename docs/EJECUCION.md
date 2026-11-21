@@ -14,11 +14,15 @@ Jabalí a 50 cm:
 & "C:\Program Files\Blender Foundation\Blender 5.3\blender.exe" --background --python scripts/generar_plantilla_dodo.py -- --animal jabali --modelo "C:\Users\lexar\Downloads\jabali\boar_block__anim.glb" --alto 0.5 --carton --angulo 30 --paleta --ceja-triangular
 ```
 
+El generador escribe el modelo `modelos/jabali/jabali_50cm_30grados_paleta_ceja_carton.obj`. El GLB de origen está en `C:\Users\lexar\Downloads\jabali\boar_block__anim.glb`. El PDF de 57 hojas ya está en `salida/jabali/carton_30grados_paleta_ceja/mosaico_doble_carta.pdf`, partido con una isla por hoja. Volver a lanzar el mosaico sobre esa carpeta lo reescribiría con el acomodo.
+
+El jabalí de 40 cm, con textura y ya acomodado para imprimir:
+
 ```
-py -3 scripts/mosaico_doble.py --origen salida/jabali/carton_30grados_paleta_ceja --destino salida/jabali/carton_30grados_paleta_ceja/mosaico_doble_carta.pdf
+py -3 scripts/mosaico_doble.py --origen salida/jabali/40cm_carton_30grados_paleta_ceja --destino salida/jabali/40cm_carton_30grados_paleta_ceja/mosaico_doble_carta.pdf
 ```
 
-Eso escribe el mosaico de 57 hojas y el modelo `modelos/jabali/jabali_50cm_30grados_paleta_ceja_carton.obj`. El GLB de origen está en `C:\Users\lexar\Downloads\jabali\boar_block__anim.glb`.
+Son 26 hojas. La isla que cabe sale entera y puede compartir la hoja, con 2 mm entre recuadros. La que no cabe sale en mosaico, girada si así usa menos hojas, con 15 mm de solape. `MOSAICO.txt` lista cada hoja.
 
 El mismo flujo para el dodo de 1 m, con solapas triangulares:
 

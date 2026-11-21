@@ -435,7 +435,10 @@ def main():
         sufijo += "_doble"
     else:
         carpeta = "carta"
-    OUT = ROOT / "salida" / animal / f"{carpeta}{sufijo.replace('_carton', '').replace('_doble', '')}"
+    nombre_salida = f"{carpeta}{sufijo.replace('_carton', '').replace('_doble', '')}"
+    if "--alto" in resto_argv():
+        nombre_salida = f"{int(round(alto_pedido * 100))}cm_{nombre_salida}"
+    OUT = ROOT / "salida" / animal / nombre_salida
     MODELOS = ROOT / "modelos" / animal
     OUT.mkdir(parents=True, exist_ok=True)
     MODELOS.mkdir(parents=True, exist_ok=True)

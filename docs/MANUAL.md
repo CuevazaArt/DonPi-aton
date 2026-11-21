@@ -54,6 +54,22 @@ La cola queda hacia +Y y el hocico hacia −Y. Las patas 1 y 3 están del lado d
 
 «boar block anim» por [blam](https://sketchfab.com/Blam577895), [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/).
 
+## Jabalí de 40 cm
+
+Archivo: `salida/jabali/40cm_carton_30grados_paleta_ceja/mosaico_doble_carta.pdf`.
+
+26 hojas doble carta, con la paleta impresa. El jabalí queda a 40 cm de alto. Imprime al 100 %. La hoja 1 es el cuadrado de 100 mm: mide el interior, no la solapa.
+
+Hay dos clases de hoja, y el texto de abajo lo dice.
+
+La hoja de islas enteras trae una o varias islas completas. Corta cada contorno. El papel que queda entre ellas no pertenece a ninguna pieza. No tiene clave de esquina.
+
+La hoja de mosaico es un trozo de una isla que no cupo en el papel. El solape de 15 mm se pega con la hoja vecina, y la clave de la esquina se junta con la misma clave. El cuerpo 9 ocupa 8 hojas, el cuerpo 7 ocupa 4, la montura ocupa 2 y cada muslo de las patas 1 y 3 ocupa 2. El resto de las islas va entero.
+
+La cola queda hacia +Y y el hocico hacia −Y. Las patas 1 y 3 están del lado del hocico: la 1 en +X y la 3 en −X. Las patas 2 y 4 están del lado de la cola. La pieza `03_montura` es la silla. Cartulina cerca de 0.64 m². `MOSAICO.txt`, en la misma carpeta, lista las 26 hojas.
+
+«boar block anim» por [blam](https://sketchfab.com/Blam577895), [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/).
+
 ## Otra plantilla, con menos dobleces
 
 `salida/dodo/doble_45grados/plantilla.pdf` ya está paginado en doble carta. Son 55 hojas y 60 islas, solo con líneas de corte. El ave mide 99 cm de alto, 58 cm de ancho y 107 cm de fondo. Ahí cada isla cabe en su hoja: se recorta la isla, no se pegan franjas de mosaico. El cuadrado de 100 mm comparte hoja con las piezas chicas.

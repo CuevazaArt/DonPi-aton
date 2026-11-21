@@ -12,9 +12,9 @@ Desde esta versión, una plantilla nueva se genera en este orden:
 2. La paleta reescribe el atlas: grises a turquesa, tonos cálidos a magenta, amarillos a verde lima, y el negro se conserva.
 3. El desdoble va a una lámina de cartón de 1.22 × 2.44 m, a escala 1:1, con margen de 10 mm.
 4. `--ceja-triangular` convierte cada solapa de pegado de trapecio a triángulo. Se quita el lado corto exterior. La base sigue siendo el doblez y se pega con el mismo número. La tijera hace dos cortes en la solapa. La malla no se toca.
-5. `scripts/mosaico_doble.py` reparte cada isla en doble carta, con 15 mm de solape y claves de esquina. Se imprime al 100 %. La hoja 1 es el cuadrado de 100 mm.
+5. `scripts/mosaico_doble.py` mide cada isla contra la doble carta. Si cabe, se imprime entera y comparte hoja cuando el recuadro lo permite. Si no cabe, se parte en mosaico, con 15 mm de solape y claves de esquina. Se imprime al 100 %. La hoja 1 es el cuadrado de 100 mm.
 
-El dodo publicado en `v0.1.0` se armó antes de este paso de la solapa: su mosaico todavía trae solapas trapecio. El jabalí de 50 cm es la primera plantilla del flujo completo.
+El dodo publicado en `v0.1.0` se armó antes de la solapa triangular: su mosaico todavía trae solapas trapecio. El jabalí de 50 cm es la primera plantilla con esas solapas. Esos dos PDF se partieron con una hoja por isla. El acomodo de varias islas en la misma hoja entra después, y el primer archivo hecho así es el jabalí de 40 cm.
 
 ## El jabalí
 
@@ -65,6 +65,17 @@ Desdoblar sobre una lámina de 1.22 × 2.44 m evita partir cada cara para que qu
 PosteRazor y Rasterbator convierten el plano en una foto y la línea de corte se suaviza. El mosaico de este repositorio conserva vectores, imagen y milímetros. LibreOffice Draw también puede mosaicar, con el riesgo de cambiar la escala al imprimir. El PDF ya trae el mosaico hecho.
 
 Cada esquina que toca otra hoja lleva una clave de cuatro signos, por ejemplo AA18. La hoja vecina repite esa clave en la esquina que se junta. Donde se cruzan cuatro hojas, las cuatro esquinas dicen lo mismo. La esquina del borde exterior queda sin clave. El índice completo está en `salida/dodo/carton_30grados_paleta/MOSAICO.txt`.
+
+## De dónde sale el acomodo
+
+Al medir el jabalí de 40 cm, 20 de las 25 islas cabían en el área útil de la doble carta: 259.4 × 405.8 mm, ya restados los 10 mm de margen y los 6 mm del rótulo. El mosaico de una isla por hoja gastaba una hoja entera en una isla de 42 × 66 mm. Las otras cinco no cabían y seguían necesitando mosaico.
+
+El uso es este. El desdoble no cambia: la lámina de cartón sigue a escala 1:1 y la malla se queda como la dejó la disolución. El script de impresión solo lee el recuadro de cada isla.
+
+- Si el recuadro cabe, derecho o girado 90°, la isla se imprime completa. Varias comparten la hoja cuando quedan 2 mm entre recuadros. Se corta cada contorno. Esa separación no se pega y la hoja no lleva clave de esquina.
+- Si el recuadro no cabe, la isla se parte en mosaico. El giro es el que usa menos hojas. El solape de 15 mm se pega y la clave junta las esquinas. El giro mueve la isla sobre el papel; el milímetro del dibujo no cambia.
+
+En ese jabalí el resultado es `salida/jabali/40cm_carton_30grados_paleta_ceja/mosaico_doble_carta.pdf`: 26 hojas doble carta, con la paleta ya horneada. La hoja 1 es la prueba de 100 mm. Siete hojas llevan las 20 islas enteras. Dieciocho parten las cinco islas grandes: el cuerpo 9 en 8, el cuerpo 7 en 4, la montura en 2 y cada muslo de las patas 1 y 3 en 2. Esos dos muslos pasaban de 4 hojas a 2 al poner el lado largo de la isla sobre el lado largo del papel. El índice hoja por hoja está en `MOSAICO.txt`, en la misma carpeta.
 
 ## Textura
 
