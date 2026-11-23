@@ -1,22 +1,19 @@
 # Materiales
 
-Cantidades para el dodo de 1 m, plantilla de 30° con paleta. El jabalí de 50 cm, con solapas triangulares, usa 57 hojas doble carta y cerca de 1.00 m² de cartulina: basta una lámina de 1.22 × 2.44 m. El de 40 cm, ya acomodado, usa 26 hojas doble carta y cerca de 0.64 m².
+Cantidades para el jabalí con la coronilla a 1 m.
 
 ## Papel de la plantilla
 
-- 74 hojas doble carta, 279 × 432 mm, de 90 a 120 g/m². Ese gramaje aguanta la cinta del solape y se pega plano al cartón.
+- Oficio mexicano, 216 × 340 mm, de 90 a 120 g/m². El número de hojas está en `MOSAICO.txt`. Ese gramaje aguanta la cinta del solape y se pega plano al cartón.
 - Una hoja extra para repetir la prueba de 100 mm si la primera sale mal de escala.
-- Impresión a color. La paleta usa turquesa, magenta y verde lima; el ojo es negro. En blanco y negro se pierden las caras, y las líneas de corte siguen sirviendo.
-
-Si la impresora solo tiene carta, la carpeta `salida/dodo/carta_30grados_paleta/` trae la misma geometría partida en unas 151 hojas. El trabajo de corte sube porque cada isla queda hecha pedazos.
+- Otra tirada igual si se pega el reverso, calzada con las tres agujas de cada triángulo.
+- Impresión a color. La paleta usa turquesa, magenta y verde lima. En blanco y negro se pierden las caras, y las líneas de corte siguen sirviendo.
 
 ## Cartón
 
-- Dos láminas de 1.22 × 2.44 m. Las caras suman 2.42 m² y, con solapas y recorte, piden cerca de 1.2 láminas.
+- Cuatro láminas de 1.22 × 2.44 m. Las caras suman 6.87 m² y, con solapas y recorte, piden cerca de 3.3 láminas.
 - Cartón corrugado sencillo, o cartulina gruesa de unas 600 g/m², si la piñata va a colgarse. El corrugado doble deja los dobleces duros en un modelo de este tamaño.
 - Para un ensayo, sirve cartulina de 180 g/m². El volumen cierra y pesa menos; se deforma si se cuelga lleno.
-
-La variante de 45° baja el área a 2.04 m² y sigue pidiendo dos láminas, con menos sobrante.
 
 ## Pegado
 
@@ -27,7 +24,8 @@ La variante de 45° baja el área a 2.04 m² y sigue pidiendo dos láminas, con 
 ## Corte y doblez
 
 - Cúter y regla metálica sobre una tabla de corte, para el contorno de cada isla.
-- Una plegadera, o un bolígrafo vacío, para marcar la línea punteada antes de doblar. El doblez va hacia el interior.
+- Una plegadera, o un bolígrafo vacío, para marcar el doblez antes de doblar. `AFUERA` deja el canto hacia afuera; `ADENTRO`, hacia adentro. La cara impresa queda fuera del volumen.
+- Tres agujas por triángulo, en los puntos negros, si se va a calzar una segunda plantilla por el reverso.
 - Tijeras solo para las solapas chicas de pies y canillas. En el cuerpo, la regla deja el canto más limpio.
 
 ## Lo que conviene tener a mano

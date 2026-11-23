@@ -57,7 +57,8 @@ def punto(ctm, x, y):
     return a * x + c * y + e, b * x + d * y + f
 
 
-def cajas_de_islas(pagina):
+def islas_con_puntos(pagina):
+    """Cada isla y los puntos de su dibujo, en coordenadas de la lamina."""
     contenido = pagina.get_contents()
     if contenido is None:
         return []
@@ -89,7 +90,10 @@ def cajas_de_islas(pagina):
                 xs = [p[0] for p in actual]
                 ys = [p[1] for p in actual]
                 if xs:
-                    islas.append((min(xs), min(ys), max(xs), max(ys)))
+                    islas.append((
+                        (min(xs), min(ys), max(xs), max(ys)),
+                        actual,
+                    ))
             ctm = pila.pop()
             if not pila:
                 actual = None
@@ -118,6 +122,38 @@ def cajas_de_islas(pagina):
                 anotar(dx, dy)
         pila_numeros.clear()
     return islas
+
+
+def proyectar(pieza, sx, sy, dest_x, dest_y):
+    if pieza["gira"]:
+        return -sy + dest_x + pieza["y1"], sx + dest_y - pieza["x0"]
+    return dest_x - pieza["x0"] + sx, dest_y - pieza["y0"] + sy
+
+
+def tinta_de_celda(pieza, paso_x, paso_y, ventana_x, ventana_y, margen, franja):
+    """Recuadro con dibujo dentro de la casilla. None si la hoja saldria casi en blanco."""
+    dest_x = margen - pieza["columna"] * paso_x
+    dest_y = margen + franja - pieza["fila"] * paso_y
+    x0, y0 = margen, margen + franja
+    x1, y1 = margen + ventana_x, margen + franja + ventana_y
+    dentro = []
+    for sx, sy in pieza["puntos"]:
+        px, py = proyectar(pieza, sx, sy, dest_x, dest_y)
+        if x0 <= px <= x1 and y0 <= py <= y1:
+            dentro.append((px, py))
+    if len(dentro) < 6:
+        return None
+    xs = [p[0] for p in dentro]
+    ys = [p[1] for p in dentro]
+    pad = mm(2)
+    ix0 = max(x0, min(xs) - pad)
+    iy0 = max(y0, min(ys) - pad)
+    ix1 = min(x1, max(xs) + pad)
+    iy1 = min(y1, max(ys) + pad)
+    ancho, alto = ix1 - ix0, iy1 - iy0
+    if ancho < mm(25) or alto < mm(25) or ancho * alto < mm(40) * mm(40):
+        return None
+    return ix0, iy0, ancho, alto
 
 
 LETRAS = "ABCDEFGHJKLMNPQRSTUVWXYZ"
@@ -611,9 +647,9 @@ def empaquetar_fijo(piezas, ventana_x, ventana_y, separacion):
 
 
 def colocar_celda(destino, pieza, px, py, paso_x, paso_y, margen, franja):
-    """El trozo que caeria en la ventana de su casilla se pone en (px, py)."""
-    dest_x = margen - pieza["columna"] * paso_x + (px - margen)
-    dest_y = margen + franja - pieza["fila"] * paso_y + (py - (margen + franja))
+    """El dibujo de la casilla se pone con su esquina de tinta en (px, py)."""
+    dest_x = margen - pieza["columna"] * paso_x + (px - pieza["ox"])
+    dest_y = margen + franja - pieza["fila"] * paso_y + (py - pieza["oy"])
     return colocar(
         destino,
         pieza["pagina"],
@@ -714,16 +750,19 @@ def mosaico(origen, destino):
         lector = PdfReader(str(archivo))
         lectores.append(lector)
         for numero, pagina in enumerate(lector.pages, 1):
-            cajas = cajas_de_islas(pagina)
-            if not cajas:
-                cajas = [(
-                    float(pagina.mediabox.left),
-                    float(pagina.mediabox.bottom),
-                    float(pagina.mediabox.right),
-                    float(pagina.mediabox.top),
+            grupos = islas_con_puntos(pagina)
+            if not grupos:
+                grupos = [(
+                    (
+                        float(pagina.mediabox.left),
+                        float(pagina.mediabox.bottom),
+                        float(pagina.mediabox.right),
+                        float(pagina.mediabox.top),
+                    ),
+                    [],
                 )]
             nombre = archivo.stem
-            for n_isla, caja in enumerate(cajas, 1):
+            for n_isla, (caja, puntos_isla) in enumerate(grupos, 1):
                 x0, y0, x1, y1 = caja
                 islas.append({
                     "pagina": pagina,
@@ -736,6 +775,7 @@ def mosaico(origen, destino):
                     "nombre": nombre,
                     "isla": n_isla,
                     "pag": numero,
+                    "puntos": puntos_isla,
                 })
 
     enteras = [
@@ -767,6 +807,18 @@ def mosaico(origen, destino):
                     ),
                 })
 
+    con_tinta = []
+    vacias = 0
+    for pieza in piezas:
+        tinta = tinta_de_celda(pieza, paso_x, paso_y, ventana_x, ventana_y, margen, franja)
+        if tinta is None:
+            vacias += 1
+            continue
+        pieza["ox"], pieza["oy"], pieza["tw"], pieza["th"] = tinta
+        con_tinta.append(pieza)
+    print("TROZOS", len(piezas), "con dibujo", len(con_tinta), "en blanco", vacias)
+    piezas = con_tinta
+
     juntas = {}
     for pieza in piezas:
         for esquina, fila_junta, col_junta in (
@@ -796,8 +848,6 @@ def mosaico(origen, destino):
             esquinas[esquina] = codigos.get(clave_junta, "")
         pieza["esquinas"] = esquinas
 
-    for pieza in piezas:
-        pieza["tw"], pieza["th"] = tamano_celda(pieza, paso_x, paso_y, ventana_x, ventana_y)
     completas = [pieza for pieza in piezas if celda_llena(pieza["tw"], pieza["th"], ventana_x, ventana_y)]
     parciales = [pieza for pieza in piezas if pieza not in completas]
     cajones_parciales = empaquetar_fijo(parciales, ventana_x, ventana_y, mm(SEPARACION_MM))

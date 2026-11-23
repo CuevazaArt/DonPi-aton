@@ -1,6 +1,6 @@
 """Desdobla el jabali para que la coronilla quede a 1 m del suelo.
 
-Parte del modelo ya disuelto a 30 grados y 0.50 m de alto total.
+Abre la malla ya disuelta a 30 grados, con la coronilla a 1 m.
 La coronilla es el punto mas alto del cuerpo en el 30 % delantero,
 desde el hocico. La montura puede quedar por encima de ese metro.
 Las solapas salen en triangulo y la escala del dibujo es 1:1.
@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import generar_plantilla_dodo as gen
 
 ROOT = Path(__file__).resolve().parents[1]
-BLEND = ROOT / "modelos" / "jabali" / "jabali_50cm_30grados_paleta_ceja_carton.blend"
+BLEND = ROOT / "modelos" / "jabali" / "jabali_100cm_cabeza_30grados_paleta_ceja_carton.blend"
 OUT = ROOT / "salida" / "jabali" / "100cm_cabeza_carton_30grados_paleta_ceja"
 MODELOS = ROOT / "modelos" / "jabali"
 ALTO_CABEZA_M = 1.0

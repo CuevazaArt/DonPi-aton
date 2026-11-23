@@ -18,315 +18,193 @@ En el mosaico, la fila 1 es la de arriba.
 TL es la esquina superior izquierda, TR la superior derecha, BL la inferior izquierda y BR la inferior derecha.
 
 portada  cuadrado de 100 mm centrado, figura armada e instrucciones
-mosaico  01_cuerpo isla 1  2/7 x 1/6   TL AA06  TR AA07  BL AA13  BR AA14
-mosaico  01_cuerpo isla 1  2/7 x 2/6   TL AA07  TR AA08  BL AA14  BR AA15
-mosaico  01_cuerpo isla 1  2/7 x 3/6   TL AA08  TR AA09  BL AA15  BR AA16
-mosaico  01_cuerpo isla 1  2/7 x 4/6   TL AA09  TR AA10  BL AA16  BR AA17
-mosaico  01_cuerpo isla 1  2/7 x 5/6   TL AA10  TR AA11  BL AA17  BR AA18
-mosaico  01_cuerpo isla 1  3/7 x 1/6   TL AA13  TR AA14  BL AA20  BR AA21
-mosaico  01_cuerpo isla 1  3/7 x 2/6   TL AA14  TR AA15  BL AA21  BR AA22
-mosaico  01_cuerpo isla 1  3/7 x 3/6   TL AA15  TR AA16  BL AA22  BR AA23
-mosaico  01_cuerpo isla 1  3/7 x 4/6   TL AA16  TR AA17  BL AA23  BR AA24
-mosaico  01_cuerpo isla 1  3/7 x 5/6   TL AA17  TR AA18  BL AA24  BR AA25
-mosaico  01_cuerpo isla 1  4/7 x 1/6   TL AA20  TR AA21  BL AA27  BR AA28
-mosaico  01_cuerpo isla 1  4/7 x 2/6   TL AA21  TR AA22  BL AA28  BR AA29
-mosaico  01_cuerpo isla 1  4/7 x 3/6   TL AA22  TR AA23  BL AA29  BR AA30
-mosaico  01_cuerpo isla 1  4/7 x 4/6   TL AA23  TR AA24  BL AA30  BR AA31
-mosaico  01_cuerpo isla 1  4/7 x 5/6   TL AA24  TR AA25  BL AA31  BR AA32
-mosaico  01_cuerpo isla 1  5/7 x 1/6   TL AA27  TR AA28  BL AA34  BR AA35
-mosaico  01_cuerpo isla 1  5/7 x 2/6   TL AA28  TR AA29  BL AA35  BR AA36
-mosaico  01_cuerpo isla 1  5/7 x 3/6   TL AA29  TR AA30  BL AA36  BR AA37
-mosaico  01_cuerpo isla 1  5/7 x 4/6   TL AA30  TR AA31  BL AA37  BR AA38
-mosaico  01_cuerpo isla 1  5/7 x 5/6   TL AA31  TR AA32  BL AA38  BR AA39
-mosaico  01_cuerpo isla 1  6/7 x 1/6   TL AA34  TR AA35  BL AA41  BR AA42
-mosaico  01_cuerpo isla 1  6/7 x 2/6   TL AA35  TR AA36  BL AA42  BR AA43
-mosaico  01_cuerpo isla 1  6/7 x 3/6   TL AA36  TR AA37  BL AA43  BR AA44
-mosaico  01_cuerpo isla 1  6/7 x 4/6   TL AA37  TR AA38  BL AA44  BR AA45
-mosaico  01_cuerpo isla 1  6/7 x 5/6   TL AA38  TR AA39  BL AA45  BR AA46
-mosaico  01_cuerpo isla 1  7/7 x 1/6   TL AA41  TR AA42  BL -  BR AA48
-mosaico  01_cuerpo isla 1  7/7 x 2/6   TL AA42  TR AA43  BL AA48  BR AA49
-mosaico  01_cuerpo isla 1  7/7 x 3/6   TL AA43  TR AA44  BL AA49  BR AA50
-mosaico  01_cuerpo isla 1  7/7 x 4/6   TL AA44  TR AA45  BL AA50  BR AA51
-mosaico  01_cuerpo isla 1  7/7 x 5/6   TL AA45  TR AA46  BL AA51  BR AA52
-mosaico  01_cuerpo isla 3  2/2 x 1/2   TL AB85  TR AB86  BL -  BR AB88
-mosaico  01_cuerpo isla 4  2/2 x 1/2   TL AC12  TR AC13  BL -  BR AC15
-mosaico  01_cuerpo isla 1  2/4 x 1/9 pag 2   TL AA61  TR AA62  BL AA71  BR AA72
-mosaico  01_cuerpo isla 1  2/4 x 2/9 pag 2   TL AA62  TR AA63  BL AA72  BR AA73
-mosaico  01_cuerpo isla 1  2/4 x 3/9 pag 2   TL AA63  TR AA64  BL AA73  BR AA74
-mosaico  01_cuerpo isla 1  2/4 x 4/9 pag 2   TL AA64  TR AA65  BL AA74  BR AA75
-mosaico  01_cuerpo isla 1  2/4 x 5/9 pag 2   TL AA65  TR AA66  BL AA75  BR AA76
-mosaico  01_cuerpo isla 1  2/4 x 6/9 pag 2   TL AA66  TR AA67  BL AA76  BR AA77
-mosaico  01_cuerpo isla 1  2/4 x 7/9 pag 2   TL AA67  TR AA68  BL AA77  BR AA78
-mosaico  01_cuerpo isla 1  2/4 x 8/9 pag 2   TL AA68  TR AA69  BL AA78  BR AA79
-mosaico  01_cuerpo isla 1  3/4 x 1/9 pag 2   TL AA71  TR AA72  BL AA81  BR AA82
-mosaico  01_cuerpo isla 1  3/4 x 2/9 pag 2   TL AA72  TR AA73  BL AA82  BR AA83
-mosaico  01_cuerpo isla 1  3/4 x 3/9 pag 2   TL AA73  TR AA74  BL AA83  BR AA84
-mosaico  01_cuerpo isla 1  3/4 x 4/9 pag 2   TL AA74  TR AA75  BL AA84  BR AA85
-mosaico  01_cuerpo isla 1  3/4 x 5/9 pag 2   TL AA75  TR AA76  BL AA85  BR AA86
-mosaico  01_cuerpo isla 1  3/4 x 6/9 pag 2   TL AA76  TR AA77  BL AA86  BR AA87
-mosaico  01_cuerpo isla 1  3/4 x 7/9 pag 2   TL AA77  TR AA78  BL AA87  BR AA88
-mosaico  01_cuerpo isla 1  3/4 x 8/9 pag 2   TL AA78  TR AA79  BL AA88  BR AA89
-mosaico  01_cuerpo isla 1  4/4 x 1/9 pag 2   TL AA81  TR AA82  BL -  BR AA91
-mosaico  01_cuerpo isla 1  4/4 x 2/9 pag 2   TL AA82  TR AA83  BL AA91  BR AA92
-mosaico  01_cuerpo isla 1  4/4 x 3/9 pag 2   TL AA83  TR AA84  BL AA92  BR AA93
-mosaico  01_cuerpo isla 1  4/4 x 4/9 pag 2   TL AA84  TR AA85  BL AA93  BR AA94
-mosaico  01_cuerpo isla 1  4/4 x 5/9 pag 2   TL AA85  TR AA86  BL AA94  BR AA95
-mosaico  01_cuerpo isla 1  4/4 x 6/9 pag 2   TL AA86  TR AA87  BL AA95  BR AA96
-mosaico  01_cuerpo isla 1  4/4 x 7/9 pag 2   TL AA87  TR AA88  BL AA96  BR AA97
-mosaico  01_cuerpo isla 1  4/4 x 8/9 pag 2   TL AA88  TR AA89  BL AA97  BR AA98
-mosaico  01_cuerpo isla 2  2/3 x 1/2 pag 2   TL AB61  TR AB62  BL AB64  BR AB65
-mosaico  01_cuerpo isla 2  3/3 x 1/2 pag 2   TL AB64  TR AB65  BL -  BR AB67
-mosaico  01_cuerpo isla 3  2/3 x 1/2 pag 2   TL AB90  TR AB91  BL AB93  BR AB94
-mosaico  01_cuerpo isla 3  3/3 x 1/2 pag 2   TL AB93  TR AB94  BL -  BR AB96
-mosaico  01_cuerpo isla 1  2/4 x 1/6 pag 3   TL AB04  TR AB05  BL AB11  BR AB12
-mosaico  01_cuerpo isla 1  2/4 x 2/6 pag 3   TL AB05  TR AB06  BL AB12  BR AB13
-mosaico  01_cuerpo isla 1  2/4 x 3/6 pag 3   TL AB06  TR AB07  BL AB13  BR AB14
-mosaico  01_cuerpo isla 1  2/4 x 4/6 pag 3   TL AB07  TR AB08  BL AB14  BR AB15
-mosaico  01_cuerpo isla 1  2/4 x 5/6 pag 3   TL AB08  TR AB09  BL AB15  BR AB16
-mosaico  01_cuerpo isla 1  3/4 x 1/6 pag 3   TL AB11  TR AB12  BL AB18  BR AB19
-mosaico  01_cuerpo isla 1  3/4 x 2/6 pag 3   TL AB12  TR AB13  BL AB19  BR AB20
-mosaico  01_cuerpo isla 1  3/4 x 3/6 pag 3   TL AB13  TR AB14  BL AB20  BR AB21
-mosaico  01_cuerpo isla 1  3/4 x 4/6 pag 3   TL AB14  TR AB15  BL AB21  BR AB22
-mosaico  01_cuerpo isla 1  3/4 x 5/6 pag 3   TL AB15  TR AB16  BL AB22  BR AB23
-mosaico  01_cuerpo isla 1  4/4 x 1/6 pag 3   TL AB18  TR AB19  BL -  BR AB25
-mosaico  01_cuerpo isla 1  4/4 x 2/6 pag 3   TL AB19  TR AB20  BL AB25  BR AB26
-mosaico  01_cuerpo isla 1  4/4 x 3/6 pag 3   TL AB20  TR AB21  BL AB26  BR AB27
-mosaico  01_cuerpo isla 1  4/4 x 4/6 pag 3   TL AB21  TR AB22  BL AB27  BR AB28
-mosaico  01_cuerpo isla 1  4/4 x 5/6 pag 3   TL AB22  TR AB23  BL AB28  BR AB29
-mosaico  01_cuerpo isla 2  2/4 x 1/3 pag 3   TL AB70  TR AB71  BL AB74  BR AB75
-mosaico  01_cuerpo isla 2  2/4 x 2/3 pag 3   TL AB71  TR AB72  BL AB75  BR AB76
-mosaico  01_cuerpo isla 2  3/4 x 1/3 pag 3   TL AB74  TR AB75  BL AB78  BR AB79
-mosaico  01_cuerpo isla 2  3/4 x 2/3 pag 3   TL AB75  TR AB76  BL AB79  BR AB80
-mosaico  01_cuerpo isla 2  4/4 x 1/3 pag 3   TL AB78  TR AB79  BL -  BR AB82
-mosaico  01_cuerpo isla 2  4/4 x 2/3 pag 3   TL AB79  TR AB80  BL AB82  BR AB83
-mosaico  01_cuerpo isla 3  2/2 x 1/5 pag 3   TL AC01  TR AC02  BL -  BR AC07
-mosaico  01_cuerpo isla 3  2/2 x 2/5 pag 3   TL AC02  TR AC03  BL AC07  BR AC08
-mosaico  01_cuerpo isla 3  2/2 x 3/5 pag 3   TL AC03  TR AC04  BL AC08  BR AC09
-mosaico  01_cuerpo isla 3  2/2 x 4/5 pag 3   TL AC04  TR AC05  BL AC09  BR AC10
-mosaico  01_cuerpo isla 1  2/5 x 1/4 pag 4   TL AB33  TR AB34  BL AB38  BR AB39
-mosaico  01_cuerpo isla 1  2/5 x 2/4 pag 4   TL AB34  TR AB35  BL AB39  BR AB40
-mosaico  01_cuerpo isla 1  2/5 x 3/4 pag 4   TL AB35  TR AB36  BL AB40  BR AB41
-mosaico  01_cuerpo isla 1  3/5 x 1/4 pag 4   TL AB38  TR AB39  BL AB43  BR AB44
-mosaico  01_cuerpo isla 1  3/5 x 2/4 pag 4   TL AB39  TR AB40  BL AB44  BR AB45
-mosaico  01_cuerpo isla 1  3/5 x 3/4 pag 4   TL AB40  TR AB41  BL AB45  BR AB46
-mosaico  01_cuerpo isla 1  4/5 x 1/4 pag 4   TL AB43  TR AB44  BL AB48  BR AB49
-mosaico  01_cuerpo isla 1  4/5 x 2/4 pag 4   TL AB44  TR AB45  BL AB49  BR AB50
-mosaico  01_cuerpo isla 1  4/5 x 3/4 pag 4   TL AB45  TR AB46  BL AB50  BR AB51
-mosaico  01_cuerpo isla 1  5/5 x 1/4 pag 4   TL AB48  TR AB49  BL -  BR AB53
-mosaico  01_cuerpo isla 1  5/5 x 2/4 pag 4   TL AB49  TR AB50  BL AB53  BR AB54
-mosaico  01_cuerpo isla 1  5/5 x 3/4 pag 4   TL AB50  TR AB51  BL AB54  BR AB55
-mosaico  03_montura isla 1  2/4 x 1/6   TL AC31  TR AC32  BL AC38  BR AC39
-mosaico  03_montura isla 1  2/4 x 2/6   TL AC32  TR AC33  BL AC39  BR AC40
-mosaico  03_montura isla 1  2/4 x 3/6   TL AC33  TR AC34  BL AC40  BR AC41
-mosaico  03_montura isla 1  2/4 x 4/6   TL AC34  TR AC35  BL AC41  BR AC42
-mosaico  03_montura isla 1  2/4 x 5/6   TL AC35  TR AC36  BL AC42  BR AC43
-mosaico  03_montura isla 1  3/4 x 1/6   TL AC38  TR AC39  BL AC45  BR AC46
-mosaico  03_montura isla 1  3/4 x 2/6   TL AC39  TR AC40  BL AC46  BR AC47
-mosaico  03_montura isla 1  3/4 x 3/6   TL AC40  TR AC41  BL AC47  BR AC48
-mosaico  03_montura isla 1  3/4 x 4/6   TL AC41  TR AC42  BL AC48  BR AC49
-mosaico  03_montura isla 1  3/4 x 5/6   TL AC42  TR AC43  BL AC49  BR AC50
-mosaico  03_montura isla 1  4/4 x 1/6   TL AC45  TR AC46  BL -  BR AC52
-mosaico  03_montura isla 1  4/4 x 2/6   TL AC46  TR AC47  BL AC52  BR AC53
-mosaico  03_montura isla 1  4/4 x 3/6   TL AC47  TR AC48  BL AC53  BR AC54
-mosaico  03_montura isla 1  4/4 x 4/6   TL AC48  TR AC49  BL AC54  BR AC55
-mosaico  03_montura isla 1  4/4 x 5/6   TL AC49  TR AC50  BL AC55  BR AC56
-mosaico  04_pata_1_muslo isla 1  2/5 x 1/6   TL AC62  TR AC63  BL AC69  BR AC70
-mosaico  04_pata_1_muslo isla 1  2/5 x 2/6   TL AC63  TR AC64  BL AC70  BR AC71
-mosaico  04_pata_1_muslo isla 1  2/5 x 3/6   TL AC64  TR AC65  BL AC71  BR AC72
-mosaico  04_pata_1_muslo isla 1  2/5 x 4/6   TL AC65  TR AC66  BL AC72  BR AC73
-mosaico  04_pata_1_muslo isla 1  2/5 x 5/6   TL AC66  TR AC67  BL AC73  BR AC74
-mosaico  04_pata_1_muslo isla 1  3/5 x 1/6   TL AC69  TR AC70  BL AC76  BR AC77
-mosaico  04_pata_1_muslo isla 1  3/5 x 2/6   TL AC70  TR AC71  BL AC77  BR AC78
-mosaico  04_pata_1_muslo isla 1  3/5 x 3/6   TL AC71  TR AC72  BL AC78  BR AC79
-mosaico  04_pata_1_muslo isla 1  3/5 x 4/6   TL AC72  TR AC73  BL AC79  BR AC80
-mosaico  04_pata_1_muslo isla 1  3/5 x 5/6   TL AC73  TR AC74  BL AC80  BR AC81
-mosaico  04_pata_1_muslo isla 1  4/5 x 1/6   TL AC76  TR AC77  BL AC83  BR AC84
-mosaico  04_pata_1_muslo isla 1  4/5 x 2/6   TL AC77  TR AC78  BL AC84  BR AC85
-mosaico  04_pata_1_muslo isla 1  4/5 x 3/6   TL AC78  TR AC79  BL AC85  BR AC86
-mosaico  04_pata_1_muslo isla 1  4/5 x 4/6   TL AC79  TR AC80  BL AC86  BR AC87
-mosaico  04_pata_1_muslo isla 1  4/5 x 5/6   TL AC80  TR AC81  BL AC87  BR AC88
-mosaico  04_pata_1_muslo isla 1  5/5 x 1/6   TL AC83  TR AC84  BL -  BR AC90
-mosaico  04_pata_1_muslo isla 1  5/5 x 2/6   TL AC84  TR AC85  BL AC90  BR AC91
-mosaico  04_pata_1_muslo isla 1  5/5 x 3/6   TL AC85  TR AC86  BL AC91  BR AC92
-mosaico  04_pata_1_muslo isla 1  5/5 x 4/6   TL AC86  TR AC87  BL AC92  BR AC93
-mosaico  04_pata_1_muslo isla 1  5/5 x 5/6   TL AC87  TR AC88  BL AC93  BR AC94
-mosaico  05_pata_1_canilla isla 1  2/3 x 1/3   TL AC97  TR AC98  BL AD01  BR AD02
-mosaico  05_pata_1_canilla isla 1  2/3 x 2/3   TL AC98  TR AC99  BL AD02  BR AD03
-mosaico  05_pata_1_canilla isla 1  3/3 x 1/3   TL AD01  TR AD02  BL -  BR AD05
-mosaico  05_pata_1_canilla isla 1  3/3 x 2/3   TL AD02  TR AD03  BL AD05  BR AD06
-mosaico  06_pata_1_pie isla 1  2/2 x 1/4   TL AD10  TR AD11  BL -  BR AD15
-mosaico  06_pata_1_pie isla 1  2/2 x 2/4   TL AD11  TR AD12  BL AD15  BR AD16
-mosaico  06_pata_1_pie isla 1  2/2 x 3/4   TL AD12  TR AD13  BL AD16  BR AD17
-mosaico  07_pata_3_muslo isla 1  2/5 x 1/6   TL AD23  TR AD24  BL AD30  BR AD31
-mosaico  07_pata_3_muslo isla 1  2/5 x 2/6   TL AD24  TR AD25  BL AD31  BR AD32
-mosaico  07_pata_3_muslo isla 1  2/5 x 3/6   TL AD25  TR AD26  BL AD32  BR AD33
-mosaico  07_pata_3_muslo isla 1  2/5 x 4/6   TL AD26  TR AD27  BL AD33  BR AD34
-mosaico  07_pata_3_muslo isla 1  2/5 x 5/6   TL AD27  TR AD28  BL AD34  BR AD35
-mosaico  07_pata_3_muslo isla 1  3/5 x 1/6   TL AD30  TR AD31  BL AD37  BR AD38
-mosaico  07_pata_3_muslo isla 1  3/5 x 2/6   TL AD31  TR AD32  BL AD38  BR AD39
-mosaico  07_pata_3_muslo isla 1  3/5 x 3/6   TL AD32  TR AD33  BL AD39  BR AD40
-mosaico  07_pata_3_muslo isla 1  3/5 x 4/6   TL AD33  TR AD34  BL AD40  BR AD41
-mosaico  07_pata_3_muslo isla 1  3/5 x 5/6   TL AD34  TR AD35  BL AD41  BR AD42
-mosaico  07_pata_3_muslo isla 1  4/5 x 1/6   TL AD37  TR AD38  BL AD44  BR AD45
-mosaico  07_pata_3_muslo isla 1  4/5 x 2/6   TL AD38  TR AD39  BL AD45  BR AD46
-mosaico  07_pata_3_muslo isla 1  4/5 x 3/6   TL AD39  TR AD40  BL AD46  BR AD47
-mosaico  07_pata_3_muslo isla 1  4/5 x 4/6   TL AD40  TR AD41  BL AD47  BR AD48
-mosaico  07_pata_3_muslo isla 1  4/5 x 5/6   TL AD41  TR AD42  BL AD48  BR AD49
-mosaico  07_pata_3_muslo isla 1  5/5 x 1/6   TL AD44  TR AD45  BL -  BR AD51
-mosaico  07_pata_3_muslo isla 1  5/5 x 2/6   TL AD45  TR AD46  BL AD51  BR AD52
-mosaico  07_pata_3_muslo isla 1  5/5 x 3/6   TL AD46  TR AD47  BL AD52  BR AD53
-mosaico  07_pata_3_muslo isla 1  5/5 x 4/6   TL AD47  TR AD48  BL AD53  BR AD54
-mosaico  07_pata_3_muslo isla 1  5/5 x 5/6   TL AD48  TR AD49  BL AD54  BR AD55
-mosaico  08_pata_3_canilla isla 1  2/3 x 1/3   TL AD58  TR AD59  BL AD62  BR AD63
-mosaico  08_pata_3_canilla isla 1  2/3 x 2/3   TL AD59  TR AD60  BL AD63  BR AD64
-mosaico  08_pata_3_canilla isla 1  3/3 x 1/3   TL AD62  TR AD63  BL -  BR AD66
-mosaico  08_pata_3_canilla isla 1  3/3 x 2/3   TL AD63  TR AD64  BL AD66  BR AD67
-mosaico  09_pata_3_pie isla 1  2/2 x 1/4   TL AD71  TR AD72  BL -  BR AD76
-mosaico  09_pata_3_pie isla 1  2/2 x 2/4   TL AD72  TR AD73  BL AD76  BR AD77
-mosaico  09_pata_3_pie isla 1  2/2 x 3/4   TL AD73  TR AD74  BL AD77  BR AD78
-mosaico  10_pata_2_muslo isla 1  2/4 x 1/4   TL AD82  TR AD83  BL AD87  BR AD88
-mosaico  10_pata_2_muslo isla 1  2/4 x 2/4   TL AD83  TR AD84  BL AD88  BR AD89
-mosaico  10_pata_2_muslo isla 1  2/4 x 3/4   TL AD84  TR AD85  BL AD89  BR AD90
-mosaico  10_pata_2_muslo isla 1  3/4 x 1/4   TL AD87  TR AD88  BL AD92  BR AD93
-mosaico  10_pata_2_muslo isla 1  3/4 x 2/4   TL AD88  TR AD89  BL AD93  BR AD94
-mosaico  10_pata_2_muslo isla 1  3/4 x 3/4   TL AD89  TR AD90  BL AD94  BR AD95
-mosaico  10_pata_2_muslo isla 1  4/4 x 1/4   TL AD92  TR AD93  BL -  BR AD97
-mosaico  10_pata_2_muslo isla 1  4/4 x 2/4   TL AD93  TR AD94  BL AD97  BR AD98
-mosaico  10_pata_2_muslo isla 1  4/4 x 3/4   TL AD94  TR AD95  BL AD98  BR AD99
-mosaico  11_pata_2_canilla isla 1  2/2 x 1/4   TL AE03  TR AE04  BL -  BR AE08
-mosaico  11_pata_2_canilla isla 1  2/2 x 2/4   TL AE04  TR AE05  BL AE08  BR AE09
-mosaico  11_pata_2_canilla isla 1  2/2 x 3/4   TL AE05  TR AE06  BL AE09  BR AE10
-mosaico  12_pata_2_pie isla 1  2/2 x 1/2   TL AE12  TR AE13  BL -  BR AE15
-mosaico  13_pata_4_muslo isla 1  2/4 x 1/4   TL AE19  TR AE20  BL AE24  BR AE25
-mosaico  13_pata_4_muslo isla 1  2/4 x 2/4   TL AE20  TR AE21  BL AE25  BR AE26
-mosaico  13_pata_4_muslo isla 1  2/4 x 3/4   TL AE21  TR AE22  BL AE26  BR AE27
-mosaico  13_pata_4_muslo isla 1  3/4 x 1/4   TL AE24  TR AE25  BL AE29  BR AE30
-mosaico  13_pata_4_muslo isla 1  3/4 x 2/4   TL AE25  TR AE26  BL AE30  BR AE31
-mosaico  13_pata_4_muslo isla 1  3/4 x 3/4   TL AE26  TR AE27  BL AE31  BR AE32
-mosaico  13_pata_4_muslo isla 1  4/4 x 1/4   TL AE29  TR AE30  BL -  BR AE34
-mosaico  13_pata_4_muslo isla 1  4/4 x 2/4   TL AE30  TR AE31  BL AE34  BR AE35
-mosaico  13_pata_4_muslo isla 1  4/4 x 3/4   TL AE31  TR AE32  BL AE35  BR AE36
-mosaico  14_pata_4_canilla isla 1  2/2 x 1/4   TL AE40  TR AE41  BL -  BR AE45
-mosaico  14_pata_4_canilla isla 1  2/2 x 2/4   TL AE41  TR AE42  BL AE45  BR AE46
-mosaico  14_pata_4_canilla isla 1  2/2 x 3/4   TL AE42  TR AE43  BL AE46  BR AE47
-mosaico  15_pata_4_pie isla 1  2/2 x 1/2   TL AE49  TR AE50  BL -  BR AE52
-mosaico compartido  01_cuerpo isla 3  2/2 x 5/5 pag 3
-mosaico compartido  13_pata_4_muslo isla 1  1/4 x 1/4
-mosaico compartido  13_pata_4_muslo isla 1  1/4 x 2/4
-mosaico compartido  13_pata_4_muslo isla 1  1/4 x 3/4
-mosaico compartido  10_pata_2_muslo isla 1  1/4 x 1/4
+mosaico  04_pata_1_muslo isla 1  3/5 x 2/6   TL AC01  TR AC02  BL AC05  BR AC06
+mosaico  08_pata_3_canilla isla 1  2/3 x 1/3   TL AC62  TR AC63  BL AC66  BR AC67
+mosaico  08_pata_3_canilla isla 1  3/3 x 1/3   TL AC66  TR AC67  BL -  BR AC69
+mosaico  13_pata_4_muslo isla 1  2/4 x 2/4   TL AD15  TR AD16  BL AD19  BR AD20
+mosaico  13_pata_4_muslo isla 1  4/4 x 1/4   TL AD23  TR AD24  BL -  BR AD28
+mosaico compartido  15_pata_4_pie isla 1  2/2 x 1/2
+mosaico compartido  12_pata_2_pie isla 1  2/2 x 1/2
+mosaico compartido  14_pata_4_canilla isla 1  2/2 x 3/4
+mosaico compartido  13_pata_4_muslo isla 1  4/4 x 2/4
+mosaico compartido  14_pata_4_canilla isla 1  2/2 x 2/4
+mosaico compartido  01_cuerpo isla 1  3/7 x 5/6
+mosaico compartido  06_pata_1_pie isla 1  2/2 x 3/4
+mosaico compartido  13_pata_4_muslo isla 1  3/4 x 3/4
+mosaico compartido  01_cuerpo isla 1  2/7 x 4/6
 mosaico compartido  10_pata_2_muslo isla 1  1/4 x 2/4
-mosaico compartido  10_pata_2_muslo isla 1  1/4 x 3/4
-mosaico compartido  03_montura isla 1  1/4 x 1/6
-mosaico compartido  03_montura isla 1  1/4 x 2/6
-mosaico compartido  03_montura isla 1  1/4 x 3/6
-mosaico compartido  03_montura isla 1  1/4 x 4/6
+mosaico compartido  03_montura isla 1  4/4 x 4/6
+mosaico compartido  10_pata_2_muslo isla 1  3/4 x 2/4
+mosaico compartido  01_cuerpo isla 1  6/7 x 4/6
+mosaico compartido  13_pata_4_muslo isla 1  1/4 x 1/4
+mosaico compartido  03_montura isla 1  2/4 x 3/6
+mosaico compartido  07_pata_3_muslo isla 1  4/5 x 3/6
+mosaico compartido  01_cuerpo isla 3  2/2 x 1/2
+mosaico compartido  04_pata_1_muslo isla 1  4/5 x 2/6
+mosaico compartido  10_pata_2_muslo isla 1  4/4 x 1/4
+mosaico compartido  05_pata_1_canilla isla 1  3/3 x 1/3
+mosaico compartido  03_montura isla 1  3/4 x 4/6
+mosaico compartido  13_pata_4_muslo isla 1  3/4 x 2/4
+mosaico compartido  11_pata_2_canilla isla 1  2/2 x 3/4
+mosaico compartido  03_montura isla 1  3/4 x 3/6
+mosaico compartido  01_cuerpo isla 2  4/4 x 1/3 pag 3
+mosaico compartido  10_pata_2_muslo isla 1  2/4 x 2/4
+mosaico compartido  01_cuerpo isla 3  2/2 x 4/5 pag 3
 mosaico compartido  03_montura isla 1  1/4 x 5/6
+mosaico compartido  01_cuerpo isla 2  3/3 x 1/2 pag 2
 mosaico compartido  01_cuerpo isla 1  2/4 x 6/6 pag 3
-mosaico compartido  01_cuerpo isla 1  3/4 x 6/6 pag 3
-mosaico compartido  01_cuerpo isla 1  4/4 x 6/6 pag 3
-mosaico compartido  01_cuerpo isla 5  2/2 x 1/1
+mosaico compartido  01_cuerpo isla 2  3/4 x 2/3 pag 3
+mosaico compartido  04_pata_1_muslo isla 1  2/5 x 3/6
+mosaico compartido  04_pata_1_muslo isla 1  3/5 x 3/6
+mosaico compartido  01_cuerpo isla 1  2/4 x 2/9 pag 2
+mosaico compartido  11_pata_2_canilla isla 1  2/2 x 2/4
+mosaico compartido  05_pata_1_canilla isla 1  2/3 x 1/3
 mosaico compartido  01_cuerpo isla 2  1/1 x 1/3
+mosaico compartido  01_cuerpo isla 1  2/7 x 3/6
+mosaico compartido  07_pata_3_muslo isla 1  3/5 x 2/6 | 01_cuerpo isla 1  4/4 x 8/9 pag 2
+mosaico compartido  09_pata_3_pie isla 1  2/2 x 3/4
+mosaico compartido  02_cola isla 1  1/1 x 2/3 | 01_cuerpo isla 1  4/4 x 2/9 pag 2
+mosaico compartido  07_pata_3_muslo isla 1  3/5 x 3/6
+mosaico compartido  01_cuerpo isla 1  2/4 x 4/9 pag 2
+mosaico compartido  07_pata_3_muslo isla 1  5/5 x 3/6
+mosaico compartido  01_cuerpo isla 3  2/3 x 1/2 pag 2
+mosaico compartido  01_cuerpo isla 2  4/4 x 2/3 pag 3
+mosaico compartido  01_cuerpo isla 4  2/2 x 1/2
+mosaico compartido  10_pata_2_muslo isla 1  3/4 x 3/4
+mosaico compartido  01_cuerpo isla 1  3/4 x 4/9 pag 2
+mosaico compartido  04_pata_1_muslo isla 1  4/5 x 3/6
+mosaico compartido  01_cuerpo isla 1  2/4 x 5/9 pag 2 | 01_cuerpo isla 1  1/7 x 4/6
+mosaico compartido  01_cuerpo isla 1  4/4 x 1/6 pag 3
+mosaico compartido  01_cuerpo isla 1  6/7 x 3/6
+mosaico compartido  01_cuerpo isla 1  4/4 x 3/6 pag 3
+mosaico compartido  01_cuerpo isla 1  3/5 x 3/4 pag 4
+mosaico compartido  01_cuerpo isla 1  5/7 x 4/6
+mosaico compartido  02_cola isla 1  1/1 x 1/3 | 01_cuerpo isla 1  1/7 x 1/6
+mosaico compartido  09_pata_3_pie isla 1  2/2 x 1/4
+mosaico compartido  13_pata_4_muslo isla 1  2/4 x 3/4
+mosaico compartido  01_cuerpo isla 5  2/2 x 1/1
+mosaico compartido  04_pata_1_muslo isla 1  5/5 x 1/6
+mosaico compartido  12_pata_2_pie isla 1  2/2 x 2/2 | 07_pata_3_muslo isla 1  1/5 x 6/6 | 07_pata_3_muslo isla 1  2/5 x 6/6
+mosaico compartido  04_pata_1_muslo isla 1  3/5 x 1/6
+mosaico compartido  15_pata_4_pie isla 1  2/2 x 2/2
+mosaico compartido  01_cuerpo isla 1  2/4 x 6/9 pag 2 | 01_cuerpo isla 1  4/4 x 4/9 pag 2
 mosaico compartido  01_cuerpo isla 2  1/1 x 2/3
-mosaico compartido  01_cuerpo isla 1  2/5 x 4/4 pag 4
-mosaico compartido  01_cuerpo isla 1  3/5 x 4/4 pag 4
-mosaico compartido  01_cuerpo isla 1  4/5 x 4/4 pag 4
-mosaico compartido  01_cuerpo isla 1  5/5 x 4/4 pag 4
-mosaico compartido  01_cuerpo isla 2  2/4 x 3/3 pag 3
-mosaico compartido  01_cuerpo isla 2  3/4 x 3/3 pag 3
-mosaico compartido  01_cuerpo isla 2  4/4 x 3/3 pag 3
-mosaico compartido  02_cola isla 1  1/1 x 1/3
-mosaico compartido  02_cola isla 1  1/1 x 2/3
 mosaico compartido  01_cuerpo isla 4  2/2 x 2/2
-mosaico compartido  01_cuerpo isla 3  2/2 x 2/2
+mosaico compartido  01_cuerpo isla 1  3/4 x 5/9 pag 2 | 01_cuerpo isla 1  4/4 x 6/9 pag 2
+mosaico compartido  13_pata_4_muslo isla 1  4/4 x 3/4 | 07_pata_3_muslo isla 1  1/5 x 2/6
+mosaico compartido  10_pata_2_muslo isla 1  2/4 x 3/4 | 01_cuerpo isla 1  1/7 x 3/6
+mosaico compartido  01_cuerpo isla 3  2/2 x 2/5 pag 3
+mosaico compartido  08_pata_3_canilla isla 1  2/3 x 2/3
+mosaico compartido  07_pata_3_muslo isla 1  3/5 x 1/6
+mosaico compartido  01_cuerpo isla 1  2/4 x 3/9 pag 2 | 01_cuerpo isla 1  3/4 x 2/9 pag 2
+mosaico compartido  01_cuerpo isla 1  3/4 x 4/6 pag 3
+mosaico compartido  08_pata_3_canilla isla 1  3/3 x 2/3
+mosaico compartido  01_cuerpo isla 2  4/4 x 3/3 pag 3
+mosaico compartido  01_cuerpo isla 1  4/7 x 4/6
+mosaico compartido  07_pata_3_muslo isla 1  2/5 x 2/6
+mosaico compartido  07_pata_3_muslo isla 1  2/5 x 3/6
+mosaico compartido  14_pata_4_canilla isla 1  2/2 x 1/4 | 14_pata_4_canilla isla 1  1/2 x 1/4 | 01_cuerpo isla 2  3/4 x 3/3 pag 3
+mosaico compartido  01_cuerpo isla 1  2/4 x 7/9 pag 2
+mosaico compartido  06_pata_1_pie isla 1  2/2 x 2/4 | 01_cuerpo isla 1  1/4 x 1/9 pag 2 | 01_cuerpo isla 3  1/2 x 4/5 pag 3
+mosaico compartido  01_cuerpo isla 1  2/5 x 3/4 pag 4
 mosaico compartido  01_cuerpo isla 3  2/3 x 2/2 pag 2
+mosaico compartido  01_cuerpo isla 1  3/7 x 4/6
+mosaico compartido  06_pata_1_pie isla 1  2/2 x 1/4
+mosaico compartido  10_pata_2_muslo isla 1  2/4 x 1/4
+mosaico compartido  03_montura isla 1  2/4 x 4/6
+mosaico compartido  10_pata_2_muslo isla 1  1/4 x 3/4
+mosaico compartido  01_cuerpo isla 2  2/4 x 2/3 pag 3
+mosaico compartido  10_pata_2_muslo isla 1  1/4 x 1/4 | 11_pata_2_canilla isla 1  1/2 x 2/4
+mosaico compartido  01_cuerpo isla 2  2/3 x 2/2 pag 2 | 01_cuerpo isla 1  1/4 x 7/9 pag 2
+mosaico compartido  15_pata_4_pie isla 1  1/2 x 1/2 | 01_cuerpo isla 1  2/4 x 1/6 pag 3
+mosaico compartido  13_pata_4_muslo isla 1  3/4 x 1/4
+mosaico compartido  09_pata_3_pie isla 1  2/2 x 2/4
+mosaico compartido  12_pata_2_pie isla 1  1/2 x 1/2 | 01_cuerpo isla 5  1/2 x 1/1
+mosaico compartido  01_cuerpo isla 1  6/7 x 2/6
 mosaico compartido  01_cuerpo isla 3  3/3 x 2/2 pag 2
-mosaico compartido  01_cuerpo isla 2  2/3 x 2/2 pag 2
-mosaico compartido  01_cuerpo isla 2  3/3 x 2/2 pag 2
-mosaico compartido  15_pata_4_pie isla 1  2/2 x 2/2 | 04_pata_1_muslo isla 1  2/5 x 6/6
-mosaico compartido  12_pata_2_pie isla 1  2/2 x 2/2 | 04_pata_1_muslo isla 1  3/5 x 6/6
-mosaico compartido  08_pata_3_canilla isla 1  2/3 x 3/3 | 04_pata_1_muslo isla 1  4/5 x 6/6
-mosaico compartido  08_pata_3_canilla isla 1  3/3 x 3/3 | 04_pata_1_muslo isla 1  5/5 x 6/6
-mosaico compartido  05_pata_1_canilla isla 1  2/3 x 3/3 | 07_pata_3_muslo isla 1  2/5 x 6/6
-mosaico compartido  05_pata_1_canilla isla 1  3/3 x 3/3 | 07_pata_3_muslo isla 1  3/5 x 6/6
-mosaico compartido  01_cuerpo isla 1  2/4 x 9/9 pag 2 | 07_pata_3_muslo isla 1  4/5 x 6/6
-mosaico compartido  01_cuerpo isla 1  3/4 x 9/9 pag 2 | 07_pata_3_muslo isla 1  5/5 x 6/6
-mosaico compartido  01_cuerpo isla 1  4/4 x 9/9 pag 2 | 04_pata_1_muslo isla 1  1/5 x 6/6
-mosaico compartido  01_cuerpo isla 3  1/2 x 1/5 pag 3 | 01_cuerpo isla 5  1/2 x 1/1
-mosaico compartido  01_cuerpo isla 3  1/2 x 2/5 pag 3
-mosaico compartido  01_cuerpo isla 3  1/2 x 3/5 pag 3
-mosaico compartido  01_cuerpo isla 3  1/2 x 4/5 pag 3
+mosaico compartido  01_cuerpo isla 3  1/2 x 3/5 pag 3 | 09_pata_3_pie isla 1  1/2 x 3/4
+mosaico compartido  01_cuerpo isla 1  1/4 x 3/6 pag 3 | 01_cuerpo isla 1  4/5 x 4/4 pag 4 | 03_montura isla 1  2/4 x 6/6
+mosaico compartido  07_pata_3_muslo isla 1  2/5 x 1/6 | 04_pata_1_muslo isla 1  1/5 x 4/6
+mosaico compartido  05_pata_1_canilla isla 1  2/3 x 2/3
+mosaico compartido  01_cuerpo isla 1  4/4 x 6/6 pag 3
+mosaico compartido  01_cuerpo isla 1  3/4 x 6/9 pag 2
+mosaico compartido  01_cuerpo isla 1  3/5 x 4/4 pag 4
+mosaico compartido  01_cuerpo isla 1  2/5 x 4/4 pag 4
+mosaico compartido  01_cuerpo isla 1  1/4 x 5/9 pag 2 | 01_cuerpo isla 1  2/7 x 1/6
+mosaico compartido  01_cuerpo isla 1  2/4 x 4/6 pag 3
 mosaico compartido  01_cuerpo isla 1  1/4 x 1/6 pag 3
-mosaico compartido  01_cuerpo isla 1  1/4 x 2/6 pag 3
-mosaico compartido  01_cuerpo isla 1  1/4 x 3/6 pag 3
-mosaico compartido  01_cuerpo isla 1  1/4 x 4/6 pag 3
-mosaico compartido  01_cuerpo isla 1  1/4 x 5/6 pag 3
-mosaico compartido  01_cuerpo isla 3  1/2 x 5/5 pag 3
-mosaico compartido  15_pata_4_pie isla 1  1/2 x 1/2
-mosaico compartido  12_pata_2_pie isla 1  1/2 x 1/2
-mosaico compartido  01_cuerpo isla 2  1/4 x 1/3 pag 3
-mosaico compartido  01_cuerpo isla 2  1/4 x 2/3 pag 3
-mosaico compartido  13_pata_4_muslo isla 1  2/4 x 4/4 | 07_pata_3_muslo isla 1  1/5 x 6/6
-mosaico compartido  13_pata_4_muslo isla 1  3/4 x 4/4
-mosaico compartido  13_pata_4_muslo isla 1  4/4 x 4/4
-mosaico compartido  10_pata_2_muslo isla 1  2/4 x 4/4
-mosaico compartido  10_pata_2_muslo isla 1  3/4 x 4/4
-mosaico compartido  10_pata_2_muslo isla 1  4/4 x 4/4
-mosaico compartido  13_pata_4_muslo isla 1  1/4 x 4/4
-mosaico compartido  10_pata_2_muslo isla 1  1/4 x 4/4
-mosaico compartido  01_cuerpo isla 1  1/4 x 1/9 pag 2
-mosaico compartido  01_cuerpo isla 1  1/4 x 2/9 pag 2
-mosaico compartido  01_cuerpo isla 1  1/4 x 3/9 pag 2
-mosaico compartido  01_cuerpo isla 1  1/4 x 4/9 pag 2
-mosaico compartido  01_cuerpo isla 1  1/4 x 5/9 pag 2
-mosaico compartido  01_cuerpo isla 1  1/4 x 6/9 pag 2
-mosaico compartido  01_cuerpo isla 1  1/4 x 7/9 pag 2
-mosaico compartido  01_cuerpo isla 1  1/4 x 8/9 pag 2
-mosaico compartido  01_cuerpo isla 1  2/7 x 6/6
-mosaico compartido  01_cuerpo isla 1  3/7 x 6/6
-mosaico compartido  01_cuerpo isla 1  4/7 x 6/6
-mosaico compartido  01_cuerpo isla 1  5/7 x 6/6
-mosaico compartido  01_cuerpo isla 1  6/7 x 6/6
-mosaico compartido  01_cuerpo isla 1  7/7 x 6/6
+mosaico compartido  03_montura isla 1  1/4 x 4/6
+mosaico compartido  01_cuerpo isla 1  2/4 x 2/6 pag 3 | 01_cuerpo isla 1  1/5 x 3/4 pag 4
+mosaico compartido  01_cuerpo isla 1  7/7 x 3/6
+mosaico compartido  01_cuerpo isla 3  2/2 x 2/2 | 01_cuerpo isla 1  1/4 x 4/6 pag 3
 mosaico compartido  01_cuerpo isla 1  1/4 x 6/6 pag 3
-mosaico compartido  01_cuerpo isla 2  1/4 x 3/3 pag 3
-mosaico compartido  04_pata_1_muslo isla 1  1/5 x 1/6
-mosaico compartido  04_pata_1_muslo isla 1  1/5 x 2/6
-mosaico compartido  04_pata_1_muslo isla 1  1/5 x 3/6
-mosaico compartido  04_pata_1_muslo isla 1  1/5 x 4/6
-mosaico compartido  04_pata_1_muslo isla 1  1/5 x 5/6
-mosaico compartido  07_pata_3_muslo isla 1  1/5 x 1/6
-mosaico compartido  07_pata_3_muslo isla 1  1/5 x 2/6
-mosaico compartido  07_pata_3_muslo isla 1  1/5 x 3/6
-mosaico compartido  07_pata_3_muslo isla 1  1/5 x 4/6
-mosaico compartido  07_pata_3_muslo isla 1  1/5 x 5/6
-mosaico compartido  01_cuerpo isla 4  1/1 x 1/3 pag 2
-mosaico compartido  01_cuerpo isla 4  1/1 x 2/3 pag 2
 mosaico compartido  15_pata_4_pie isla 1  1/2 x 2/2
+mosaico compartido  03_montura isla 1  2/4 x 2/6 | 07_pata_3_muslo isla 1  1/5 x 5/6
+mosaico compartido  01_cuerpo isla 1  3/4 x 6/6 pag 3 | 07_pata_3_muslo isla 1  4/5 x 1/6
+mosaico compartido  01_cuerpo isla 2  1/4 x 3/3 pag 3
+mosaico compartido  04_pata_1_muslo isla 1  5/5 x 4/6 | 01_cuerpo isla 1  1/7 x 2/6
+mosaico compartido  10_pata_2_muslo isla 1  4/4 x 2/4 | 07_pata_3_muslo isla 1  2/5 x 5/6
 mosaico compartido  12_pata_2_pie isla 1  1/2 x 2/2
-mosaico compartido  01_cuerpo isla 1  1/4 x 9/9 pag 2
-mosaico compartido  01_cuerpo isla 1  1/5 x 1/4 pag 4 | 14_pata_4_canilla isla 1  1/2 x 1/4
-mosaico compartido  01_cuerpo isla 1  1/5 x 2/4 pag 4 | 14_pata_4_canilla isla 1  1/2 x 2/4
-mosaico compartido  01_cuerpo isla 1  1/5 x 3/4 pag 4 | 14_pata_4_canilla isla 1  1/2 x 3/4
-mosaico compartido  01_cuerpo isla 4  1/2 x 1/2 | 01_cuerpo isla 1  1/7 x 1/6
-mosaico compartido  01_cuerpo isla 3  1/2 x 1/2 | 01_cuerpo isla 1  1/7 x 2/6
-mosaico compartido  14_pata_4_canilla isla 1  2/2 x 4/4 | 03_montura isla 1  2/4 x 6/6
-mosaico compartido  11_pata_2_canilla isla 1  2/2 x 4/4 | 03_montura isla 1  3/4 x 6/6
-mosaico compartido  01_cuerpo isla 1  1/5 x 4/4 pag 4 | 11_pata_2_canilla isla 1  1/2 x 1/4
-mosaico compartido  01_cuerpo isla 2  1/1 x 3/3 | 03_montura isla 1  4/4 x 6/6
-mosaico compartido  01_cuerpo isla 4  1/2 x 2/2 | 01_cuerpo isla 1  1/7 x 3/6
-mosaico compartido  01_cuerpo isla 3  1/2 x 2/2 | 01_cuerpo isla 1  1/7 x 4/6
-mosaico compartido  08_pata_3_canilla isla 1  1/3 x 1/3 | 08_pata_3_canilla isla 1  1/3 x 2/3
-mosaico compartido  05_pata_1_canilla isla 1  1/3 x 1/3 | 05_pata_1_canilla isla 1  1/3 x 2/3
-mosaico compartido  01_cuerpo isla 1  1/7 x 5/6 | 06_pata_1_pie isla 1  1/2 x 1/4
-mosaico compartido  06_pata_1_pie isla 1  1/2 x 2/4 | 06_pata_1_pie isla 1  1/2 x 3/4
-mosaico compartido  09_pata_3_pie isla 1  1/2 x 1/4 | 09_pata_3_pie isla 1  1/2 x 2/4
-mosaico compartido  09_pata_3_pie isla 1  1/2 x 3/4 | 08_pata_3_canilla isla 1  1/3 x 3/3
-mosaico compartido  02_cola isla 1  1/1 x 3/3 | 03_montura isla 1  1/4 x 6/6
-mosaico compartido  05_pata_1_canilla isla 1  1/3 x 3/3 | 11_pata_2_canilla isla 1  1/2 x 2/4
-mosaico compartido  11_pata_2_canilla isla 1  1/2 x 3/4 | 01_cuerpo isla 3  1/3 x 1/2 pag 2
-mosaico compartido  06_pata_1_pie isla 1  2/2 x 4/4 | 09_pata_3_pie isla 1  2/2 x 4/4
-mosaico compartido  01_cuerpo isla 2  1/3 x 1/2 pag 2 | 01_cuerpo isla 3  1/3 x 2/2 pag 2
-mosaico compartido  01_cuerpo isla 2  1/3 x 2/2 pag 2 | 01_cuerpo isla 1  1/7 x 6/6
-mosaico compartido  14_pata_4_canilla isla 1  1/2 x 4/4 | 01_cuerpo isla 4  1/1 x 3/3 pag 2 | 11_pata_2_canilla isla 1  1/2 x 4/4
-mosaico compartido  06_pata_1_pie isla 1  1/2 x 4/4 | 09_pata_3_pie isla 1  1/2 x 4/4
+mosaico compartido  01_cuerpo isla 1  4/7 x 5/6 | 01_cuerpo isla 1  4/5 x 3/4 pag 4 | 13_pata_4_muslo isla 1  1/4 x 3/4
+mosaico compartido  01_cuerpo isla 1  4/4 x 2/6 pag 3
+mosaico compartido  03_montura isla 1  2/4 x 5/6
+mosaico compartido  13_pata_4_muslo isla 1  1/4 x 2/4 | 07_pata_3_muslo isla 1  4/5 x 2/6
+mosaico compartido  01_cuerpo isla 3  2/2 x 5/5 pag 3 | 11_pata_2_canilla isla 1  1/2 x 1/4
+mosaico compartido  01_cuerpo isla 1  3/7 x 6/6 | 01_cuerpo isla 1  2/5 x 1/4 pag 4
+mosaico compartido  05_pata_1_canilla isla 1  3/3 x 3/3 | 01_cuerpo isla 2  3/4 x 1/3 pag 3
+mosaico compartido  01_cuerpo isla 2  2/3 x 1/2 pag 2 | 06_pata_1_pie isla 1  2/2 x 4/4
+mosaico compartido  11_pata_2_canilla isla 1  2/2 x 1/4 | 01_cuerpo isla 3  2/2 x 3/5 pag 3
+mosaico compartido  01_cuerpo isla 1  2/4 x 3/6 pag 3 | 01_cuerpo isla 1  6/7 x 5/6
+mosaico compartido  01_cuerpo isla 1  7/7 x 1/6 | 01_cuerpo isla 1  5/7 x 3/6
+mosaico compartido  01_cuerpo isla 4  1/1 x 1/3 pag 2 | 06_pata_1_pie isla 1  1/2 x 2/4
+mosaico compartido  01_cuerpo isla 1  1/4 x 9/9 pag 2 | 01_cuerpo isla 1  2/7 x 6/6 | 04_pata_1_muslo isla 1  4/5 x 4/6
+mosaico compartido  01_cuerpo isla 1  2/4 x 1/9 pag 2 | 01_cuerpo isla 1  1/4 x 8/9 pag 2
+mosaico compartido  01_cuerpo isla 1  5/5 x 4/4 pag 4 | 05_pata_1_canilla isla 1  1/3 x 2/3
+mosaico compartido  04_pata_1_muslo isla 1  5/5 x 3/6
+mosaico compartido  13_pata_4_muslo isla 1  4/4 x 4/4
+mosaico compartido  10_pata_2_muslo isla 1  1/4 x 4/4
+mosaico compartido  07_pata_3_muslo isla 1  2/5 x 4/6 | 09_pata_3_pie isla 1  1/2 x 2/4
+mosaico compartido  13_pata_4_muslo isla 1  2/4 x 1/4 | 01_cuerpo isla 1  5/7 x 5/6
+mosaico compartido  01_cuerpo isla 3  1/2 x 1/2 | 05_pata_1_canilla isla 1  1/3 x 1/3
+mosaico compartido  04_pata_1_muslo isla 1  5/5 x 5/6 | 09_pata_3_pie isla 1  1/2 x 1/4
+mosaico compartido  01_cuerpo isla 3  2/2 x 1/5 pag 3 | 14_pata_4_canilla isla 1  1/2 x 3/4
+mosaico compartido  01_cuerpo isla 4  1/2 x 1/2 | 06_pata_1_pie isla 1  1/2 x 3/4
+mosaico compartido  01_cuerpo isla 1  7/7 x 4/6 | 10_pata_2_muslo isla 1  4/4 x 3/4
+mosaico compartido  07_pata_3_muslo isla 1  1/5 x 1/6 | 14_pata_4_canilla isla 1  1/2 x 2/4
+mosaico compartido  14_pata_4_canilla isla 1  2/2 x 4/4 | 02_cola isla 1  1/1 x 3/3
+mosaico compartido  01_cuerpo isla 1  2/4 x 5/6 pag 3 | 01_cuerpo isla 4  1/1 x 2/3 pag 2
+mosaico compartido  04_pata_1_muslo isla 1  4/5 x 1/6 | 01_cuerpo isla 2  1/1 x 3/3
+mosaico compartido  01_cuerpo isla 1  5/5 x 3/4 pag 4
+mosaico compartido  01_cuerpo isla 1  1/4 x 2/6 pag 3 | 01_cuerpo isla 1  7/7 x 2/6
+mosaico compartido  01_cuerpo isla 4  1/2 x 2/2 | 05_pata_1_canilla isla 1  3/3 x 2/3
+mosaico compartido  01_cuerpo isla 1  4/4 x 4/6 pag 3 | 08_pata_3_canilla isla 1  2/3 x 3/3
+mosaico compartido  01_cuerpo isla 1  3/5 x 1/4 pag 4 | 01_cuerpo isla 3  1/3 x 1/2 pag 2
+mosaico compartido  03_montura isla 1  2/4 x 1/6 | 01_cuerpo isla 1  1/4 x 2/9 pag 2
+mosaico compartido  01_cuerpo isla 2  2/4 x 3/3 pag 3 | 09_pata_3_pie isla 1  2/2 x 4/4
+mosaico compartido  01_cuerpo isla 1  1/4 x 4/9 pag 2
+mosaico compartido  01_cuerpo isla 1  2/4 x 8/9 pag 2 | 01_cuerpo isla 1  5/7 x 2/6
+mosaico compartido  13_pata_4_muslo isla 1  2/4 x 4/4
+mosaico compartido  01_cuerpo isla 1  2/7 x 5/6 | 03_montura isla 1  3/4 x 2/6
+mosaico compartido  03_montura isla 1  3/4 x 1/6 | 08_pata_3_canilla isla 1  1/3 x 1/3
+mosaico compartido  07_pata_3_muslo isla 1  5/5 x 4/6 | 03_montura isla 1  3/4 x 5/6
+mosaico compartido  01_cuerpo isla 1  3/4 x 5/6 pag 3
+mosaico compartido  10_pata_2_muslo isla 1  3/4 x 4/4
+mosaico compartido  03_montura isla 1  4/4 x 5/6 | 03_montura isla 1  1/4 x 6/6
+mosaico compartido  10_pata_2_muslo isla 1  3/4 x 1/4 | 04_pata_1_muslo isla 1  1/5 x 3/6
+mosaico compartido  01_cuerpo isla 1  3/5 x 2/4 pag 4 | 07_pata_3_muslo isla 1  1/5 x 3/6
+mosaico compartido  04_pata_1_muslo isla 1  2/5 x 4/6 | 03_montura isla 1  4/4 x 3/6
+mosaico compartido  01_cuerpo isla 1  3/4 x 3/6 pag 3 | 07_pata_3_muslo isla 1  4/5 x 4/6
+mosaico compartido  01_cuerpo isla 2  3/3 x 2/2 pag 2
+mosaico compartido  01_cuerpo isla 3  1/2 x 2/2 | 04_pata_1_muslo isla 1  5/5 x 2/6
+mosaico compartido  01_cuerpo isla 1  2/4 x 9/9 pag 2 | 01_cuerpo isla 1  1/5 x 4/4 pag 4
+mosaico compartido  01_cuerpo isla 1  2/5 x 2/4 pag 4 | 01_cuerpo isla 1  4/7 x 6/6
+mosaico compartido  01_cuerpo isla 1  3/4 x 3/9 pag 2 | 08_pata_3_canilla isla 1  1/3 x 3/3 | 06_pata_1_pie isla 1  1/2 x 4/4
+mosaico compartido  01_cuerpo isla 1  3/4 x 7/9 pag 2 | 01_cuerpo isla 3  1/3 x 2/2 pag 2
+mosaico compartido  01_cuerpo isla 2  2/4 x 1/3 pag 3 | 01_cuerpo isla 1  1/4 x 6/9 pag 2
+mosaico compartido  01_cuerpo isla 1  1/5 x 1/4 pag 4 | 11_pata_2_canilla isla 1  1/2 x 3/4
+mosaico compartido  01_cuerpo isla 2  1/4 x 1/3 pag 3 | 07_pata_3_muslo isla 1  1/5 x 4/6
+mosaico compartido  01_cuerpo isla 3  3/3 x 1/2 pag 2 | 01_cuerpo isla 1  2/7 x 2/6
+mosaico compartido  01_cuerpo isla 3  1/2 x 2/5 pag 3 | 01_cuerpo isla 1  3/4 x 2/6 pag 3 | 01_cuerpo isla 2  1/3 x 1/2 pag 2
+mosaico compartido  01_cuerpo isla 1  4/4 x 5/6 pag 3 | 10_pata_2_muslo isla 1  2/4 x 4/4 | 01_cuerpo isla 1  5/7 x 1/6 | 13_pata_4_muslo isla 1  3/4 x 4/4
+mosaico compartido  14_pata_4_canilla isla 1  1/2 x 4/4 | 01_cuerpo isla 2  1/3 x 2/2 pag 2
+mosaico compartido  11_pata_2_canilla isla 1  2/2 x 4/4

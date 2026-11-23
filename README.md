@@ -1,67 +1,42 @@
 # DonPiñaton
 
-Plantillas a escala real para armar piñatas huecas de papel y cartón, a partir de un modelo 3D. El primer objeto es un dodo de 1 m de alto.
+Plantilla a escala real para armar una piñata hueca de jabalí, de papel y cartón, a partir de un modelo 3D. La coronilla queda a 1 m del suelo.
 
-La carpeta local se llama DonPiñaton. En GitHub el repositorio quedó como [CuevazaArt/DonPi-aton](https://github.com/CuevazaArt/DonPi-aton): el nombre con eñe no se pudo conservar en la URL y el guion ocupa su lugar. El trabajo vive en las dos rutas.
+La carpeta local se llama DonPiñaton. En GitHub el repositorio quedó como [CuevazaArt/DonPi-aton](https://github.com/CuevazaArt/DonPi-aton): el nombre con eñe no se pudo conservar en la URL y el guion ocupa su lugar.
 
-El flujo común genera la plantilla así: el protocolo elige la disolución que conserva la silueta, la malla no se colapsa, las solapas de pegado salen en triángulo, el desdoble va a lámina de cartón a escala real y la impresión acomoda las islas en doble carta. La isla que cabe sale entera. La que no cabe se parte en mosaico.
+El flujo es este: la malla ya disuelta a 30° se escala para que la coronilla quede a 1 m, las solapas salen en triángulo, el desdoble va a lámina de cartón a escala 1:1 y el curado llena hojas de oficio mexicano. La isla que cabe sale entera. La que no cabe se parte en mosaico. Un trozo sin dibujo no se imprime, y el que no llena la hoja se junta con otros.
 
-## Para armar el dodo
+## Para armar
 
-Imprime este archivo al 100 %, en doble carta (279 × 432 mm):
+Imprime este archivo al 100 %, en oficio mexicano (216 × 340 mm), sin ajustar a la página:
 
-`salida/dodo/carton_30grados_paleta/mosaico_doble_carta.pdf`
+`salida/jabali/100cm_cabeza_carton_30grados_paleta_ceja/mosaico_oficio.pdf`
 
-Son 74 hojas y 17 piezas de corte. La primera hoja trae un cuadrado cuyo interior tiene que medir 100 mm. El armado está en [el manual](docs/MANUAL.md). Papel, cartón y pegamento están en [materiales](docs/MATERIALES.md).
+La coronilla queda a 1.00 m. Con la montura el alto es 1.31 m, el largo 1.78 m y el ancho 1.50 m. Cada hoja dice `JABALI100`. La hoja 1 trae el cuadrado de 100 mm centrado, la figura armada y las instrucciones. El armado está en [el manual](docs/MANUAL.md). Papel y cartón están en [materiales](docs/MATERIALES.md).
 
-## Para armar el jabalí
-
-Imprime este archivo al 100 %, en doble carta:
-
-`salida/jabali/carton_30grados_paleta_ceja/mosaico_doble_carta.pdf`
-
-Son 57 hojas y 25 piezas de corte. El jabalí queda a 50 cm de alto. Ese archivo se partió con una isla por hoja. Las solapas son triángulos: dos cortes, y la base es el doblez. El modelo es «boar block anim» por [blam](https://sketchfab.com/Blam577895), [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/). El detalle está en [créditos](docs/CREDITOS.md).
-
-El de 40 cm, con la misma paleta y ya acomodado, está en `salida/jabali/40cm_carton_30grados_paleta_ceja/mosaico_doble_carta.pdf`. Son 26 hojas. Cada una dice `JABALI40`. La primera trae el cuadrado de 100 mm y la figura armada. Las islas que caben comparten hoja y las cinco que no caben siguen en mosaico.
-
-## Ejemplo
-
-El ave de origen, a 1 m, con un color plano por pieza para la inspección. A la derecha, la misma silueta tras disolver aristas a 30°. Abajo, el atlas recoloreado que se hornea en la plantilla.
-
-| Original | Disolución a 30° |
-| --- | --- |
-| ![Dodo original en tres cuartos](salida/dodo/protocolo/vistas/original_tres_cuartos.png) | ![Dodo tras disolver a 30 grados](salida/dodo/protocolo/vistas/equilibrio_30_tres_cuartos.png) |
-
-![Atlas del dodo con la paleta turquesa, magenta y verde lima](salida/dodo/carta_30grados_paleta/textura_paleta.png)
-
-«dodo block anim» por [blam](https://sketchfab.com/Blam577895), bajo [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/). Obra original en [Sketchfab](https://sketchfab.com/3d-models/dodo-block-anim-6b63321a76f241a3899193f129e92f7d). DonPiñaton la modificó: escala de 1 m, simplificación, paleta y plantilla de papel. blam y Sketchfab no patrocinan este repositorio. El detalle está en [créditos](docs/CREDITOS.md).
+El modelo es «boar block anim» por [blam](https://sketchfab.com/Blam577895), [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/). El detalle está en [créditos](docs/CREDITOS.md).
 
 ## Documentos
 
 | Documento | Para qué |
 | --- | --- |
-| [docs/FLUJO.md](docs/FLUJO.md) | Cómo se atacó cada complicación, de la malla al mosaico |
+| [docs/FLUJO.md](docs/FLUJO.md) | De la malla al mosaico en oficio |
 | [docs/MANUAL.md](docs/MANUAL.md) | Imprimir, cuadrar, pegar, cortar y armar |
-| [docs/EJECUCION.md](docs/EJECUCION.md) | Comandos para volver a generar una plantilla |
+| [docs/EJECUCION.md](docs/EJECUCION.md) | Comandos para volver a generar la plantilla |
 | [docs/MATERIALES.md](docs/MATERIALES.md) | Papel, cartón, cinta y pegamento |
 | [docs/CREDITOS.md](docs/CREDITOS.md) | Autor, licencia CC BY 4.0 y cambios sobre el modelo |
 
 ## Qué hay en el repositorio
 
-- `scripts/generar_plantilla_dodo.py` escala el modelo, simplifica la malla y desdobla las piezas. `--ceja-triangular` deja la malla como está y convierte cada solapa de pegado en triángulo.
-- `salida/jabali/` y `modelos/jabali/` guardan el jabalí de 50 cm hecho con ese flujo.
-- `scripts/io_export_paper_model.py` es el desdoblador. Pepakura Designer 6.3.9 está instalado para revisar a mano; este complemento hace el desdoble por script, a escala 1:1.
-- `scripts/mosaico_doble.py` acomoda las islas en doble carta. Las que caben comparten hoja. Las que no, se parten con solape y claves de esquina.
-- `scripts/protocolo_silueta.py` compara siluetas y elige hasta dónde se puede simplificar.
-- `salida/dodo/` guarda las plantillas ya generadas. Cada carpeta trae su `LEEME.txt`.
-- `modelos/dodo/` guarda la malla de 1 m en OBJ y Blend, ya horneada en metros.
-
-El GLB de origen no está en el repositorio. En esta computadora vive en `C:\Users\lexar\Downloads\dodo3d\dodo_block_anim.glb`.
+- `scripts/jabali_cabeza_1m.py` escala el jabalí ya disuelto para que la coronilla quede a 1 m y lo desdobla.
+- `scripts/generar_plantilla_dodo.py` es el desdoblador que usa ese script: paleta, solapa triangular y lámina de cartón.
+- `scripts/io_export_paper_model.py` abre la malla a escala 1:1. La flecha de armado queda dentro del corte. El doblez convexo sale como `AFUERA` y el cóncavo como `ADENTRO`.
+- `scripts/marcas_doblez.py` dibuja esas señas.
+- `scripts/insertar_puntos.py` pone tres puntos en cada triángulo para clavar agujas y calzar el reverso.
+- `scripts/mosaico_doble.py` es el curado. Con `--hoja oficio` llena hojas de 216 × 340 mm sin cambiar la escala. Omite el trozo vacío y junta los que no llenan la hoja.
+- `salida/jabali/100cm_cabeza_carton_30grados_paleta_ceja/` es la plantilla.
+- `modelos/jabali/` guarda la malla de esa escala.
 
 ## Etiqueta
 
-`v0.1.0` es el dodo de 30°, con paleta, desdoblado en lámina de cartón y mosaicado a doble carta. Sus solapas siguen en trapecio.
-
-`v0.2.0` fija el flujo común: la malla respeta la disolución que aprueba el protocolo, y las solapas de pegado salen en triángulo. El jabalí de 50 cm es la plantilla hecha con ese flujo.
-
-`v0.5.0` deja el jabalí con la coronilla a 1 m, impreso en oficio mexicano. El curado llena la hoja para gastar menos papel. Las flechas de armado quedan dentro del corte, el doblez se lee AFUERA o ADENTRO, y cada triángulo trae tres puntos para calzar el reverso.
+`v0.5.0` es este jabalí: coronilla a 1 m, oficio mexicano, curado que llena la hoja, flechas dentro del corte, dobleces `AFUERA` y `ADENTRO`, y tres puntos por triángulo.
