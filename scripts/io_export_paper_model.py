@@ -1163,13 +1163,20 @@ class Arrow:
     def __init__(self, uvedge, size, index):
         self.text = str(index)
         edge = (uvedge.vb.co - uvedge.va.co) if not uvedge.uvface.flipped else (uvedge.va.co - uvedge.vb.co)
-        self.center = (uvedge.va.co + uvedge.vb.co) / 2
+        midpoint = (uvedge.va.co + uvedge.vb.co) / 2
         self.size = size
         tangent = edge.normalized()
         cos, sin = tangent
         self.rot = M.Matrix(((cos, -sin), (sin, cos)))
-        normal = M.Vector((sin, -cos))
-        self.bounds = [self.center, self.center + (1.2 * normal + tangent) * size, self.center + (1.2 * normal - tangent) * size]
+        # +Y local entra en la cara. La flecha y el numero quedan dentro
+        # de la linea de corte, con una holgura para que la tijera no los coma.
+        interior = self.rot @ M.Vector((0, 1))
+        self.center = midpoint + interior * (size * 0.4)
+        self.bounds = [
+            self.center,
+            self.center + (1.15 * interior + tangent) * size,
+            self.center + (1.15 * interior - tangent) * size,
+        ]
 
 
 # La solapa de pegado sale en triangulo: dos cortes y la base queda como doblez.
@@ -1389,7 +1396,7 @@ class Svg:
                                     size=marker.width * 1000))
                         elif isinstance(marker, Arrow):
                             size = marker.size * 1000
-                            position = marker.center + marker.size * marker.rot @ M.Vector((0, -0.9))
+                            position = marker.center + marker.size * marker.rot @ M.Vector((0, 0.9))
                             data_markers.append(self.arrow_marker_tag.format(
                                 index=marker.text,
                                 arrow_pos=self.format_vertex(marker.center + island.pos),
@@ -1467,7 +1474,7 @@ class Svg:
     image_embedded_tag = "<image transform='translate({pos})' width='{width:.6f}' height='{height:.6f}' xlink:href='data:image/png;base64,"
     text_tag = "<text transform='translate({x} {y})' style='font-size:{size:.2f}'><tspan>{label}</tspan></text>"
     text_transformed_tag = "<text transform='matrix({mat} {pos})' style='font-size:{size:.2f}'><tspan>{label}</tspan></text>"
-    arrow_marker_tag = "<g><path transform='matrix({mat} {arrow_pos})' class='arrow' d='M 0 0 L 1 1 L 0 0.25 L -1 1 Z'/>" \
+    arrow_marker_tag = "<g><path transform='matrix({mat} {arrow_pos})' class='arrow' d='M 0 0 L 1 -1 L 0 -0.25 L -1 -1 Z'/>" \
         "<text transform='translate({pos})' style='font-size:{scale:.2f}'><tspan>{index}</tspan></text></g>"
 
     svg_base = """<?xml version='1.0' encoding='UTF-8' standalone='no'?>
@@ -1539,6 +1546,9 @@ class Svg:
     </style>"""
 
 
+_MODULO_MARCAS = None
+
+
 class Pdf:
     """Simple PDF exporter"""
 
@@ -1556,6 +1566,39 @@ class Pdf:
     def text_width(self, text, scale=None):
         return (scale or self.text_size) * sum(self.character_width.get(c, 556) for c in text) / 1000
 
+    def _modulo_marcas(self):
+        import importlib.util
+        from pathlib import Path
+
+        global _MODULO_MARCAS
+        if _MODULO_MARCAS is None:
+            ruta = Path(__file__).resolve().parent / "marcas_doblez.py"
+            spec = importlib.util.spec_from_file_location("marcas_doblez", ruta)
+            modulo = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(modulo)
+            _MODULO_MARCAS = modulo
+        return _MODULO_MARCAS
+
+    def _marca_doblez(self, uvedge, afuera):
+        return self._modulo_marcas().comandos(
+            1000 * uvedge.va.co.x,
+            1000 * uvedge.va.co.y,
+            1000 * uvedge.vb.co.x,
+            1000 * uvedge.vb.co.y,
+            afuera,
+        )
+
+    def _puntos_registro(self, island):
+        trozos = []
+        puntos = self._modulo_marcas().puntos_de_cara
+        for uvface in island.faces.values():
+            coords = []
+            for loop in uvface.face.loops:
+                co = uvface.vertices[loop].co
+                coords.append((1000 * co.x, 1000 * co.y))
+            trozos.append(puntos(coords))
+        return "\n".join(trozo for trozo in trozos if trozo)
+
     def styling(self, name, do_stroke=True):
         s, m, l = (length * self.style.line_width * 1000 for length in (1, 4, 9))
         format_style = {'SOLID': [], 'DOT': [s, m], 'DASH': [m, l], 'LONGDASH': [l, m], 'DASHDOT': [l, m, s, m]}
@@ -1563,10 +1606,22 @@ class Pdf:
         style = style or 'SOLID'
         result = ["q"]
         if do_stroke:
+            # A esta escala la raya de 0.4 mm y la raya-punto se confunden.
+            # AFUERA sale en rayas de 10 mm. ADENTRO sale en puntos.
+            if name == "convex":
+                format_style["DASH"] = [10.0, 4.0]
+            elif name == "concave":
+                format_style["DASHDOT"] = [1.2, 3.2]
+            grosor = self.style.line_width * 1000 * width
+            if name == "convex":
+                grosor = 0.70
+            elif name == "concave":
+                grosor = 0.90
+                result.append("1 J")
             result += [
                 "[ " + " ".join("{:.3f}".format(num) for num in format_style[style]) + " ] 0 d",
                 "{0:.3f} {1:.3f} {2:.3f} RG".format(*color),
-                "{:.3f} w".format(self.style.line_width * 1000 * width),
+                "{:.3f} w".format(grosor),
                 ]
         else:
             result.append("{0:.3f} {1:.3f} {2:.3f} rg".format(*color))
@@ -1679,7 +1734,7 @@ class Pdf:
                                 size=1000*marker.width))
                     elif isinstance(marker, Arrow):
                         size = 1000 * marker.size
-                        position = 1000 * (marker.center + marker.size * marker.rot @ M.Vector((0, -0.9)))
+                        position = 1000 * (marker.center + marker.size * marker.rot @ M.Vector((0, 0.9)))
                         data_markers.append(self.command_arrow.format(
                             index=marker.text,
                             arrow_pos=1000 * marker.center,
@@ -1694,6 +1749,7 @@ class Pdf:
                             size=1000*marker.size))
 
                 data_outer, data_convex, data_concave, data_freestyle = (list() for i in range(4))
+                marcas_convex, marcas_concave = [], []
                 outer_edges = set(island.boundary)
                 while outer_edges:
                     data_loop = list()
@@ -1722,10 +1778,13 @@ class Pdf:
                     if uvedge.sticker or uvedge.uvface.flipped != (id(uvedge.va) > id(uvedge.vb)):
                         if edge.angle > self.angle_epsilon:
                             data_convex.append(data_uvedge)
+                            marcas_convex.append(self._marca_doblez(uvedge, True))
                         elif edge.angle < -self.angle_epsilon:
                             data_concave.append(data_uvedge)
+                            marcas_concave.append(self._marca_doblez(uvedge, False))
                 if island.is_inside_out:
                     data_convex, data_concave = data_concave, data_convex
+                    marcas_convex, marcas_concave = marcas_concave, marcas_convex
 
                 if data_stickerfill and self.style.sticker_color[3] > 0:
                     commands += chain(self.styling("sticker", do_stroke=False), data_stickerfill, reset_style)
@@ -1737,6 +1796,12 @@ class Pdf:
                     commands += chain(self.styling("convex"), data_convex, reset_style)
                 if data_concave:
                     commands += chain(self.styling("concave"), data_concave, reset_style)
+                if marcas_convex or marcas_concave:
+                    commands.extend(marcas_convex)
+                    commands.extend(marcas_concave)
+                puntos = self._puntos_registro(island)
+                if puntos:
+                    commands.append(puntos)
                 if data_outer:
                     if not self.pure_net and self.style.use_outbg:
                         commands += chain(self.styling("outbg"), data_outer, reset_style)
@@ -1771,7 +1836,7 @@ class Pdf:
     command_label = "q /F1 {size:.6f} Tf BT {x:.6f} {y:.6f} Td ({label}) Tj ET Q"
     command_image = "q {0.x:.6f} 0 0 {0.y:.6f} 0 0 cm 1 0 0 -1 0 1 cm /{1} Do Q"
     command_sticker = "q /F1 {size:.6f} Tf {mat[0][0]:.6f} {mat[1][0]:.6f} {mat[0][1]:.6f} {mat[1][1]:.6f} {pos.x:.6f} {pos.y:.6f} cm BT {align:.6f} 0 Td ({label}) Tj ET Q"
-    command_arrow = "q /F1 {size:.6f} Tf BT {pos.x:.6f} {pos.y:.6f} Td ({index}) Tj ET {mat[0][0]:.6f} {mat[1][0]:.6f} {mat[0][1]:.6f} {mat[1][1]:.6f} {arrow_pos.x:.6f} {arrow_pos.y:.6f} cm 0 0 m 1 -1 l 0 -0.25 l -1 -1 l f Q"
+    command_arrow = "q /F1 {size:.6f} Tf BT {pos.x:.6f} {pos.y:.6f} Td ({index}) Tj ET {mat[0][0]:.6f} {mat[1][0]:.6f} {mat[0][1]:.6f} {mat[1][1]:.6f} {arrow_pos.x:.6f} {arrow_pos.y:.6f} cm 0 0 m 1 1 l 0 0.25 l -1 1 l f Q"
     command_number = "q /F1 {size:.6f} Tf {mat[0][0]:.6f} {mat[1][0]:.6f} {mat[0][1]:.6f} {mat[1][1]:.6f} {pos.x:.6f} {pos.y:.6f} cm BT ({label}) Tj ET Q"
 
 

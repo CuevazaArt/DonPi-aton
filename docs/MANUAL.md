@@ -35,7 +35,9 @@ Pega el mosaico sobre cartón de 1.22 × 2.44 m. El área de las caras es 2.42 m
 Recorta cada isla por su contorno, la línea continua exterior. Dentro de la isla:
 
 - línea continua: se corta
-- línea punteada: se dobla
+- raya larga, con la palabra AFUERA y la flecha hacia un lado: doblez convexo, el canto queda hacia afuera y la cara impresa hace de lomo
+- puntos, con la palabra ADENTRO y la flecha hacia el lado contrario: doblez cóncavo, el canto queda hacia adentro
+- la flecha con número queda dentro de la cara, junto a la arista que nombra
 - la solapa mide 12 mm y se pega con el mismo número de la arista vecina
 
 Las solapas van sin color para que el número se lea. Los números coinciden dentro de la misma pieza. En el flujo común cada solapa es un triángulo: se cortan los dos lados y la base, la línea punteada, se dobla y se pega. El mosaico del dodo publicado en `v0.1.0` todavía trae la solapa trapecio, con tres lados de corte. Las diez piezas se cierran cada una y luego se juntan por la forma: cabeza con cuerpo, pieza frontal, pieza lateral y las dos patas. La pata A es el lado X positivo del archivo. La pata B es el lado X negativo.

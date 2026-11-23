@@ -63,3 +63,5 @@ El GLB de origen no está en el repositorio. En esta computadora vive en `C:\Use
 `v0.1.0` es el dodo de 30°, con paleta, desdoblado en lámina de cartón y mosaicado a doble carta. Sus solapas siguen en trapecio.
 
 `v0.2.0` fija el flujo común: la malla respeta la disolución que aprueba el protocolo, y las solapas de pegado salen en triángulo. El jabalí de 50 cm es la plantilla hecha con ese flujo.
+
+`v0.5.0` deja el jabalí con la coronilla a 1 m, impreso en oficio mexicano. El curado llena la hoja para gastar menos papel. Las flechas de armado quedan dentro del corte, el doblez se lee AFUERA o ADENTRO, y cada triángulo trae tres puntos para calzar el reverso.
