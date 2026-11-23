@@ -12,6 +12,7 @@ El jabalí entra como la malla ya disuelta a 30°, con la coronilla a 1 m, y sal
 4. Cada solapa de pegado sale en triángulo. Se quita el lado corto exterior. La base sigue siendo el doblez. La malla no se toca.
 5. La flecha con número queda dentro de la cara, para que el corte no se la lleve. El doblez convexo se imprime `AFUERA`, en raya larga. El cóncavo se imprime `ADENTRO`, en puntos. Cada triángulo trae tres puntos para clavar agujas.
 6. `scripts/mosaico_doble.py` es el curado. Su misión es llenar lo más posible cada hoja de oficio, 216 × 340 mm, sin cambiar la escala 1:1. Si un trozo de la cuadrícula no tiene dibujo, no se imprime. Si el dibujo no llena la hoja, se junta con otros trozos. El solape de los trozos que sí se tocan sigue siendo 15 mm.
+7. `scripts/guia_interior.py` escribe el segundo PDF. Es la misma paginación, en espejo y sin textura. La piel se imprime completa. La guía se imprime solo en las hojas que el artesano elige. Al voltearla de izquierda a derecha sobre el cartón, los tres puntos coinciden con las agujas.
 
 La plantilla es `salida/jabali/100cm_cabeza_carton_30grados_paleta_ceja/mosaico_oficio.pdf`. La cola queda hacia +Y y el hocico hacia −Y. Las patas 1 y 3 están del lado del hocico; la 2 y la 4, del lado de la cola. La montura es la malla Sedlo.
 

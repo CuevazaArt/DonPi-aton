@@ -13,6 +13,7 @@ Cada hoja de impresion lleva la palabra JABALI100. Distingue este proyecto si la
 La hoja del cuadrado de 100 mm trae la figura armada. Esa imagen es referencia y no se corta.
 Cada PDF suelto es una lamina de carton de 1.22 x 2.44 m, a escala real.
 Para la impresora domestica usa mosaico_oficio.pdf: 191 hojas oficio mexicano de 216 x 340 mm, al 100 %. El trozo de cuadrícula sin dibujo no se imprime.
+La guia interior es mosaico_oficio_interior.pdf: las mismas 191 hojas, en espejo y solo con lineas. Se imprime a criterio. Conviene donde hay AFUERA.
 La palabra JABALI100 va abajo a la derecha de cada hoja.
 La hoja 1 trae el cuadrado de 100 mm centrado, la figura armada y las instrucciones de papel, carton, cortes y armado.
 Cada triangulo trae tres puntos. Una aguja en cada punto calza la plantilla del reverso y guia el corte y el doblez por el interior.

@@ -8,11 +8,17 @@ El flujo es este: la malla ya disuelta a 30° se escala para que la coronilla qu
 
 ## Para armar
 
-Imprime este archivo al 100 %, en oficio mexicano (216 × 340 mm), sin ajustar a la página:
+Hay dos PDF, en oficio mexicano (216 × 340 mm), al 100 % y sin ajustar a la página. Tienen el mismo número de hojas.
+
+La piel, a color, se imprime completa:
 
 `salida/jabali/100cm_cabeza_carton_30grados_paleta_ceja/mosaico_oficio.pdf`
 
-La coronilla queda a 1.00 m. Con la montura el alto es 1.31 m, el largo 1.78 m y el ancho 1.50 m. Cada hoja dice `JABALI100`. La hoja 1 trae el cuadrado de 100 mm centrado, la figura armada y las instrucciones. El armado está en [el manual](docs/MANUAL.md). Papel y cartón están en [materiales](docs/MATERIALES.md).
+La guía interior es el mismo desdoble en espejo y solo con líneas. Se imprime a criterio, hoja por hoja:
+
+`salida/jabali/100cm_cabeza_carton_30grados_paleta_ceja/mosaico_oficio_interior.pdf`
+
+La coronilla queda a 1.00 m. Con la montura el alto es 1.31 m, el largo 1.78 m y el ancho 1.50 m. Cada hoja de la piel dice `JABALI100`. La hoja 1 trae el cuadrado de 100 mm centrado, la figura armada y las instrucciones. El armado está en [el manual](docs/MANUAL.md). Papel y cartón están en [materiales](docs/MATERIALES.md).
 
 El modelo es «boar block anim» por [blam](https://sketchfab.com/Blam577895), [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/). El detalle está en [créditos](docs/CREDITOS.md).
 
@@ -34,9 +40,12 @@ El modelo es «boar block anim» por [blam](https://sketchfab.com/Blam577895), [
 - `scripts/marcas_doblez.py` dibuja esas señas.
 - `scripts/insertar_puntos.py` pone tres puntos en cada triángulo para clavar agujas y calzar el reverso.
 - `scripts/mosaico_doble.py` es el curado. Con `--hoja oficio` llena hojas de 216 × 340 mm sin cambiar la escala. Omite el trozo vacío y junta los que no llenan la hoja.
+- `scripts/guia_interior.py` saca la guía interior: el mismo PDF en espejo y sin textura, para calzar el reverso.
 - `salida/jabali/100cm_cabeza_carton_30grados_paleta_ceja/` es la plantilla.
 - `modelos/jabali/` guarda la malla de esa escala.
 
 ## Etiqueta
 
 `v0.5.0` es este jabalí: coronilla a 1 m, oficio mexicano, curado que llena la hoja, flechas dentro del corte, dobleces `AFUERA` y `ADENTRO`, y tres puntos por triángulo.
+
+`v0.6.0` separa la guía interior. Es el mismo desdoble en espejo y solo con líneas, hoja por hoja, para imprimir el reverso solo donde hace falta.

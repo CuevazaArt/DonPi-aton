@@ -51,7 +51,7 @@ Las solapas son triángulos: se cortan los dos lados y la base, la línea de dob
 
 Dobla hacia el interior del cascarón. Pega las solapas por dentro, de modo que la cara impresa quede afuera. El hueco es la piñata: no rellenes las piezas antes de cerrar la última solapa de cada cascarón.
 
-Si pegas una segunda plantilla por el otro lado del cartón, imprime el PDF otra vez y clava las tres agujas de cada triángulo para calzarla.
+La guía interior está en `mosaico_oficio_interior.pdf`. Es el mismo desdoble en espejo y solo con líneas, con el mismo número de hoja. Imprímela a criterio: conviene donde hay dobleces `AFUERA`. Si una pieza no tiene `AFUERA`, esas hojas pueden no imprimirse. Voltea cada hoja impresa de izquierda a derecha y pégala en la cara interna, con la tinta hacia el hueco. Los tres puntos caen en las agujas de la piel y las letras del dibujo se leen. El rótulo de arriba de esa guía se lee en el PDF para elegir la hoja; al voltearla queda al revés y no se usa para armar.
 
 La cola queda hacia +Y y el hocico hacia −Y. Las patas 1 y 3 están del lado del hocico: la 1 en +X y la 3 en −X. Las patas 2 y 4 están del lado de la cola. La pieza `03_montura` es la silla.
 

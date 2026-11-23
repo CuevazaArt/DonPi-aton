@@ -6,7 +6,7 @@ Cantidades para el jabalí con la coronilla a 1 m.
 
 - Oficio mexicano, 216 × 340 mm, de 90 a 120 g/m². El número de hojas está en `MOSAICO.txt`. Ese gramaje aguanta la cinta del solape y se pega plano al cartón.
 - Una hoja extra para repetir la prueba de 100 mm si la primera sale mal de escala.
-- Otra tirada igual si se pega el reverso, calzada con las tres agujas de cada triángulo.
+- La guía interior, `mosaico_oficio_interior.pdf`, solo en las hojas que tengan dobleces `AFUERA`. El resto puede no imprimirse.
 - Impresión a color. La paleta usa turquesa, magenta y verde lima. En blanco y negro se pierden las caras, y las líneas de corte siguen sirviendo.
 
 ## Cartón

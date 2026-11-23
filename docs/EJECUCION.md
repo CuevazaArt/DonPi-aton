@@ -20,7 +20,11 @@ py -3 scripts/insertar_puntos.py
 py -3 scripts/mosaico_doble.py --origen salida/jabali/100cm_cabeza_carton_30grados_paleta_ceja --destino salida/jabali/100cm_cabeza_carton_30grados_paleta_ceja/mosaico_oficio.pdf --hoja oficio
 ```
 
-El curado usa oficio mexicano, 216 × 340 mm. Omite el trozo de cuadrícula que no tiene dibujo y junta en una hoja los que no la llenan. `MOSAICO.txt` lista cada hoja. La hoja 1 es la portada: cuadrado de 100 mm centrado, figura armada e instrucciones.
+```
+py -3 scripts/guia_interior.py
+```
+
+El curado usa oficio mexicano, 216 × 340 mm. Omite el trozo de cuadrícula que no tiene dibujo y junta en una hoja los que no la llenan. `MOSAICO.txt` lista cada hoja. La hoja 1 es la portada: cuadrado de 100 mm centrado, figura armada e instrucciones. `guia_interior.py` escribe `mosaico_oficio_interior.pdf` con las mismas hojas, en espejo y sin textura.
 
 Si falta una librería:
 
